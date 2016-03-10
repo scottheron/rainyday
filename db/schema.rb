@@ -13,6 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20160310195805) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -32,6 +33,7 @@ ActiveRecord::Schema.define(version: 20160310195805) do
     t.string   "name"
     t.string   "category"
     t.string   "google_id"
+
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

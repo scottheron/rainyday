@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string :password
-      t.integer :zip
+      t.references :zip, index: true, foreign_key: true
 
       t.timestamps null: false
     end

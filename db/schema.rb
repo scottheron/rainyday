@@ -11,34 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160310030438) do
+ActiveRecord::Schema.define(version: 20160310195805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "goals", force: :cascade do |t|
-    t.text     "desc"
+    t.text     "description"
+    t.boolean  "completed"
     t.integer  "place_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   add_index "goals", ["place_id"], name: "index_goals_on_place_id", using: :btree
-
-  create_table "goals_users", force: :cascade do |t|
-    t.integer  "goal_id"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "goals_users", ["goal_id"], name: "index_goals_users_on_goal_id", using: :btree
-  add_index "goals_users", ["user_id"], name: "index_goals_users_on_user_id", using: :btree
+  add_index "goals", ["user_id"], name: "index_goals_on_user_id", using: :btree
 
   create_table "places", force: :cascade do |t|
     t.string   "name"
-    t.string   "address"
-    t.integer  "zip"
+    t.string   "category"
+    t.string   "google_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -47,12 +40,22 @@ ActiveRecord::Schema.define(version: 20160310030438) do
     t.string   "name"
     t.string   "email"
     t.string   "password"
-    t.integer  "zip"
+    t.integer  "zip_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "users", ["zip_id"], name: "index_users_on_zip_id", using: :btree
+
+  create_table "zips", force: :cascade do |t|
+    t.integer  "code"
+    t.integer  "lat"
+    t.integer  "lng"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_foreign_key "goals", "places"
-  add_foreign_key "goals_users", "goals"
-  add_foreign_key "goals_users", "users"
+  add_foreign_key "goals", "users"
+  add_foreign_key "users", "zips"
 end

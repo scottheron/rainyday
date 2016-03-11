@@ -99,11 +99,10 @@
       </div>
       <div class="modal-body">
         <h1>Login</h1>
-        <%= bootstrap_form_for :user do |user| %>
+        <%= bootstrap_form_for :user, url: '/login' do |user| %>
         <%= user.email_field :email %>
         <%= user.password_field :password %>
-        
-        <%= user.primary 'Login' %>
+        <%= user.primary 'login' %>
         <% end %>
       </div>
     </div>
@@ -120,14 +119,16 @@
       </div>
       <div class="modal-body">
         <h1>Sign Up</h1>
-        <%= bootstrap_form_for :user do |user| %>
+        <%= bootstrap_form_for :user, url: '/signup' do |user| %>
           <%= user.text_field :name %>
-          <%= user.text_field :zipcode %>
           <%= user.email_field :email %>
           <%= user.password_field :password %>
           <%= user.password_field :password_confirmation %>
-
+          <%= bootstrap_form_for :zip do |zip| %>
+            <%= zip.text_field :code %>
+          
           <%= user.primary 'Signup' %>
+          <% end %>
         <% end %>
       </div>
     </div>

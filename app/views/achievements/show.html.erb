@@ -1,12 +1,11 @@
 <h1>My Achievements</h1>
 
-<% if @achievements %>
-  <% @achievements.each do |a| %>
+<% @achievements.each do |a| %>
+  <% if a.user_id === @current_user.id %>
     <div class="container">
-      <h3><%= c.description %></h3>
-      <h4><%= c.place.name %></h4>
+      <h3><%= a.description %></h3>
+      <h4><%= a.place.name %></h4>
     </div>
+  <% else %>
   <% end %>
-<% else %>
-
 <% end %>

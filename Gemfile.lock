@@ -56,6 +56,8 @@ GEM
     debug_inspector (0.0.2)
     domain_name (0.5.20160216)
       unf (>= 0.0.5, < 1.0.0)
+    email_validator (1.6.0)
+      activemodel
     erubis (2.7.0)
     execjs (2.6.0)
     fastercsv (1.5.5)
@@ -164,6 +166,7 @@ DEPENDENCIES
   bootstrap_form
   byebug
   coffee-rails (~> 4.1.0)
+  email_validator
   jbuilder (~> 2.0)
   jquery-rails
   pg (~> 0.15)

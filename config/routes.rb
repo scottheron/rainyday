@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'search' => 'place#index'
+  get 'results' => 'place#search'
+
   root 'main#index'
 
   post '/signup' => 'main#create'
@@ -10,9 +13,7 @@ Rails.application.routes.draw do
   get 'logout' => 'sessions#destroy'
 
   get 'profile' => 'user#show'
-  
-  # root "google_places_api_test_kathy#index"
-  get '/google' => 'google_places_api_test_kathy#index'
+
 
   get 'goal' => "goal#show"
   get 'goal/new' => "goal#new"

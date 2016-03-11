@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-
   root 'main#index'
 
+  get 'profile' => 'user#show'
+  
 
   # root "google_places_api_test_kathy#index"
   get '/google' => 'google_places_api_test_kathy#index'

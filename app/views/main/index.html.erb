@@ -24,7 +24,12 @@
       </div>
       <div class="modal-body">
         <h1>Login</h1>
-        <%= render 'main/form' %>
+        <%= bootstrap_form_for :user do |user| %>
+        <%= user.email_field :email %>
+        <%= user.password_field :password %>
+
+        <%= user.primary 'Login' %>
+        <% end %>
       </div>
     </div>
   </div>

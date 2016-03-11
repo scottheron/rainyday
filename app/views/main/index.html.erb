@@ -1,0 +1,60 @@
+<div class="container">
+  <h1>Rainy Day</h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-4">
+    <%= link_to 'Login', '#login', class:'btn btn-primary', data: {:toggle => 'modal'} %>
+  </div>
+  <div class="col-xs-4">
+    About Us
+  </div>
+  <div class="col-xs-4">
+    <%= link_to 'Sign Up', '#signup', class:'btn btn-primary', data: {:toggle => 'modal'} %>
+  </div>
+</div>
+
+
+<div class="modal fade" id="login">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Login to Rainy Day</h4>
+      </div>
+      <div class="modal-body">
+        <h1>Login</h1>
+        <%= bootstrap_form_for :user do |user| %>
+          <%= user.email_field :email %>
+          <%= user.password_field :password %>
+
+          <%= user.primary 'Login' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="signup">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Sign up for Rainy Day</h4>
+      </div>
+      <div class="modal-body">
+        <h1>Sign Up</h1>
+        <%= bootstrap_form_for :user do |user| %>
+          <%= user.text_field :name %>
+          <%= user.text_field :zipcode %>
+          <%= user.email_field :email %>
+          <%= user.password_field :password %>
+          <%= user.password_field :password_confirmation %>
+
+          <%= user.primary 'Signup' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

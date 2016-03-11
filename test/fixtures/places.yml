@@ -1,0 +1,12 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  category: MyString
+  google_id: MyString
+
+two:
+  name: MyString
+  category: MyString
+  google_id: MyString
+

@@ -1,0 +1,15 @@
+<h1>Search results</h1>
+
+<% if @results %>
+	<% @results["results"].each do |place| %>
+		<h1><%= place["name"] %></h1>
+	<% end %>
+<% else %>
+	<p>No results found.</p>
+<% end %>
+
+
+
+
+
+

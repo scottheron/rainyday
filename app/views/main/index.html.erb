@@ -18,6 +18,9 @@
   <div class="col-xs-4"> </div>
 </div>
 
+<br>
+<br>
+
 <div id="about_us">
 <h2 id="aboutUsLabel">About us</h2>
   <div class="row">
@@ -64,7 +67,6 @@
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p><a href="#" class="btn btn-primary" role="button">LinkedIn</a> <a href="#" class="btn btn-default" role="button">GitHub</a></p>
         </div>
       </div>
     </div>
@@ -99,11 +101,10 @@
       </div>
       <div class="modal-body">
         <h1>Login</h1>
-        <%= bootstrap_form_for :user do |user| %>
+        <%= bootstrap_form_for :user, url: '/login' do |user| %>
         <%= user.email_field :email %>
         <%= user.password_field :password %>
-        
-        <%= user.primary 'Login' %>
+        <%= user.primary 'login' %>
         <% end %>
       </div>
     </div>
@@ -120,15 +121,19 @@
       </div>
       <div class="modal-body">
         <h1>Sign Up</h1>
-        <%= bootstrap_form_for :user do |user| %>
+
+        <%= bootstrap_form_for :user, url: '/signup' do |user| %>
           <%= user.text_field :name %>
-          <%= user.text_field :zipcode %>
           <%= user.email_field :email %>
           <%= user.password_field :password %>
           <%= user.password_field :password_confirmation %>
-
+          <%= bootstrap_form_for :zip do |zip| %>
+            <%= zip.text_field :code %>
+          
           <%= user.primary 'Signup' %>
+          <% end %>
         <% end %>
+
       </div>
     </div>
   </div>

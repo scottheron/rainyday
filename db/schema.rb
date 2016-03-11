@@ -48,9 +48,9 @@ ActiveRecord::Schema.define(version: 20160310195805) do
   add_index "users", ["zip_id"], name: "index_users_on_zip_id", using: :btree
 
   create_table "zips", force: :cascade do |t|
-    t.integer  "code"
-    t.integer  "lat"
-    t.integer  "lng"
+    t.string   "code"
+    t.float    "lat"
+    t.float    "lng"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

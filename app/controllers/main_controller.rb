@@ -15,7 +15,11 @@ class MainController < ApplicationController
       redirect_to root_path
     else
       user = User.create user_params
-      zip = Zip.create zip_params
+      zipcode = params[:zip][:code]
+      lat = zipcode.to_lat
+      lon = zipcode.to_lon
+      zip = Zip.create({'code': zipcode, 'lat': lat, 'lng': lon})
+
       if user.valid?
         session[:user_id] = user.id
         flash[:success] = 'User created and logged in'
@@ -41,13 +45,7 @@ class MainController < ApplicationController
     if (password == password_confirmation)
       params.require(:user).permit(:name, :email, :password)
     else
-
       nil
     end
   end  
-
-  # def user_zip
-  #   params.require(:zip)
-  # end
-
 end

@@ -1,19 +1,93 @@
-<div class="container">
-  <h1>Rainy Day</h1>
+<div class="jumbotron">
+  <h1 id="title">Rainy Day</h1>
+  <p>Create a list of things you would like to do on a rainy day</p>
 </div>
 
 <div class="row">
-  <div class="col-xs-4">
+  <div class="col-xs-4"> </div>
+  <div class="col-xs-1 login_btn">
     <%= link_to 'Login', '#login', class:'btn btn-primary', data: {:toggle => 'modal'} %>
   </div>
-  <div class="col-xs-4">
-    About Us
+  <div class="col-xs-1 about_us_btn">
+    <%= link_to 'About Us', '#about_us', class:'btn btn-primary' %>
   </div>
-  <div class="col-xs-4">
+  <div class="col-xs-1 sign_up_btn">
     <%= link_to 'Sign Up', '#signup', class:'btn btn-primary', data: {:toggle => 'modal'} %>
   </div>
+  <div class="col-xs-4"> </div>
 </div>
 
+<div id="about_us">
+<h2 id="aboutUsLabel">About us</h2>
+  <div class="row">
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <img src="http://lorempixel.com/400/200" alt="...">
+        <div class="caption">
+          <h3>Kathy</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p><a href="https://www.linkedin.com/in/kathylovan" class="btn btn-primary" role="button">LinkedIn</a> <a href="https://github.com/katiosity" class="btn btn-default" role="button">GitHub</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <img src="http://lorempixel.com/400/200" alt="...">
+        <div class="caption">
+          <h3>Katlyn</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p><a href="https://www.linkedin.com/in/katlyn-buffum-9891b8b1" class="btn btn-primary" role="button">LinkedIn</a> <a href="https://github.com/k-buffum" class="btn btn-default" role="button">GitHub</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <img src="http://lorempixel.com/400/200" alt="...">
+        <div class="caption">
+          <h3>Neth</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p><a href="#" class="btn btn-primary" role="button">LinkedIn</a> <a href="#" class="btn btn-default" role="button">GitHub</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <img src="http://lorempixel.com/400/200" alt="...">
+        <div class="caption">
+          <h3>Scott</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p><a href="https://www.linkedin.com/in/scott-heron-8287ab18" class="btn btn-primary" role="button">LinkedIn</a> <a href="https://github.com/scottheron" class="btn btn-default" role="button">GitHub</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
 
 <div class="modal fade" id="login">
   <div class="modal-dialog">

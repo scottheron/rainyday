@@ -1,0 +1,2 @@
+module GooglePlacesApiTestKathyHelper
+end

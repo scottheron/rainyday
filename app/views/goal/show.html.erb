@@ -1,0 +1,8 @@
+<h1>My Achievements</h1>
+
+
+<% @goals.each |goal| do %>
+<h3><%= goal.place.name %></h3>
+<h5><%= goal.description %></h5>
+<%= link_to 'destroy', goal, method :delete %>
+<% end %>

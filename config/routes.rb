@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   post '/' => 'main#create'
 
-  get 'profile' => 'user#show'
+  get '/achievements' => 'achievements#show'
   
   # root "google_places_api_test_kathy#index"
   get '/google' => 'google_places_api_test_kathy#index'
@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get 'goal/new' => "goal#new"
   post 'goal' => "goal#create"
   delete 'goal' => "goal#destroy"
+
+  get 'profile' => 'user#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

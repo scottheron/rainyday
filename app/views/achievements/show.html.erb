@@ -1,0 +1,12 @@
+<h1>My Achievements</h1>
+
+<% if @achievements %>
+  <% @achievements.each do |a| %>
+    <div class="container">
+      <h3><%= c.description %></h3>
+      <h4><%= c.place.name %></h4>
+    </div>
+  <% end %>
+<% else %>
+
+<% end %>

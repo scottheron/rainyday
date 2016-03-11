@@ -120,15 +120,7 @@
       </div>
       <div class="modal-body">
         <h1>Sign Up</h1>
-        <%= bootstrap_form_for :user do |user| %>
-          <%= user.text_field :name %>
-          <%= user.text_field :zipcode %>
-          <%= user.email_field :email %>
-          <%= user.password_field :password %>
-          <%= user.password_field :password_confirmation %>
-
-          <%= user.primary 'Signup' %>
-        <% end %>
+        <%= render 'user/formsignup' %>
       </div>
     </div>
   </div>

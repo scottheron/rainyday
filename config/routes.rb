@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'main#index'
 
-  post '/' => 'main#create'
+  post "/", to: "user#create", as: "signup"
+  # post '/' => 'main#create'
 
   get 'profile' => 'user#show'
   

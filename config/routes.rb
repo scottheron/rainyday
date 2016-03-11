@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   root 'main#index'
 
+  get 'goal' => "goal#show"
+  get 'goal/new' => "goal#new"
+  post 'goal' => "goal#create"
+  delete 'goal' => "goal#destroy"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

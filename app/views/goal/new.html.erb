@@ -1,0 +1,10 @@
+<h1>Add an acheivement!</h1>
+
+<%= form_for @goal do |f| %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <%= f.submit %>
+
+<% end %>

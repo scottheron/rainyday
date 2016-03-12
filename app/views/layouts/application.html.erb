@@ -12,7 +12,7 @@
   </head>
   <body>
 
-
+<!-- <% if @current_user %> -->
   <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -29,6 +29,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to 'About Us', '/#about_us', class:'btn btn-primary' %></li>
             <li><a href="/profile">Profile</a></li>
             <li><a href="/goal">Goals</a></li>
             <li><a href="/achievements">Achievements</a></li>
@@ -38,6 +39,7 @@
       </div><!-- /.navbar-collapse -->
     </div>
   </nav>
+<!-- <% end %> -->
   <%= render 'partials/alert' %>
 
 

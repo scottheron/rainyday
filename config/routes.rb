@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
-  root 'main#index'
-
   get 'search' => 'place#index'
-  
   get 'results' => 'place#search'
 
-  post 'signup' => 'user#create'
+  root 'main#index'
 
-  get 'login' => 'sessions#new'
-  post 'login' => 'sessions#create'
+  post '/signup' => 'user#create'
+
+  post '/login' => 'session#create'
+
+  get '/login' => 'session#new'
   
-  get 'logout' => 'sessions#destroy'
+  get '/logout' => 'session#destroy'
 
   get 'profile' => 'user#show'
 

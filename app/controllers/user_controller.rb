@@ -16,6 +16,8 @@ class UserController < ApplicationController
       lat = zipcode.to_lat
       lon = zipcode.to_lon
       zip = Zip.create({'code': zipcode, 'lat': lat, 'lng': lon})
+      user.zip = zip
+      user.save
 
       if user.valid?
         session[:user_id] = user.id

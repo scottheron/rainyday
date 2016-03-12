@@ -1,6 +1,6 @@
 class GoalController < ApplicationController
   def show
-    @goals = @current_user.goals.findAll
+    @goals = Goal.where(completed: false)
   end
 
   def new

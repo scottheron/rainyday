@@ -1,9 +1,12 @@
 <h1>My Goals</h1>
 
-<% if @goals.completed do %>
-  <% @goals.each do |goal| %>
+<% @goals.each do |goal| %>
+  <% if goal.user_id === @current_user.id %>
     <h3><%= goal.place.name %></h3>
-    <h5><%= goal.description %></h5>
-    <%= link_to 'destroy', goal, method :delete %>
+    <h4><%= goal.description %></h4>
+    <%= link_to 'destroy', goal, :method => :delete %>
   <% end %>
 <% end %>
+
+
+

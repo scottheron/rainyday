@@ -6,15 +6,17 @@
 
 <div class="row">
   <div class="col-xs-4"> </div>
-  <div class="col-xs-1 login_btn">
-    <%= link_to 'Login', '#login', class:'btn btn-primary', data: {:toggle => 'modal'} %>
-  </div>
-  <div class="col-xs-1 about_us_btn">
-    <%= link_to 'About Us', '#about_us', class:'btn btn-primary' %>
-  </div>
-  <div class="col-xs-1 sign_up_btn">
-    <%= link_to 'Sign Up', '#signup', class:'btn btn-primary', data: {:toggle => 'modal'} %>
-  </div>
+  <% if !@current_user %>
+    <div class="col-xs-1 login_btn">
+      <%= link_to 'Login', '#login', class:'btn btn-primary', data: {:toggle => 'modal'} %>
+    </div>
+    <div class="col-xs-1 about_us_btn">
+      <%= link_to 'About Us', '#about_us', class:'btn btn-primary' %>
+    </div>
+    <div class="col-xs-1 sign_up_btn">
+      <%= link_to 'Sign Up', '#signup', class:'btn btn-primary', data: {:toggle => 'modal'} %>
+    </div>
+  <% end %>
   <div class="col-xs-4"> </div>
 </div>
 

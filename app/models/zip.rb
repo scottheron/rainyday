@@ -1,4 +1,4 @@
 class Zip < ActiveRecord::Base
-  validates :zip,
+  validates :code,
   uniqueness: true
 end

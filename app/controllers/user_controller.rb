@@ -15,8 +15,12 @@ class UserController < ApplicationController
       zipcode = params[:zip][:code]
       lat = zipcode.to_lat
       lon = zipcode.to_lon
-      zip = Zip.create({'code': zipcode, 'lat': lat, 'lng': lon})
-      user.zip = zip
+      new_zip = Zip.find_or_create_by(code: zipcode) do |z|
+        z.lat = lat
+        z.lng = lon
+      end
+
+      user.zip_id = new_zip.id
       user.save
 
       if user.valid?

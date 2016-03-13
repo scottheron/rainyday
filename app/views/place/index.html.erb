@@ -1,5 +1,5 @@
 <%= form_tag("/results", method: "get") do %>
-  <%= label_tag(:q, "Find a place:") %>
+  <%= label_tag(:q, "Search for places near you:") %>
   <%= text_field_tag(:q) %>
   <%= submit_tag("Search") %>
 <% end %>

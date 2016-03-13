@@ -2,7 +2,7 @@
 
 <% if @goals.length == 0 %>
     <h3>You dont have any goals yet.</h3>
-    <h4>Search for a new place and add a goal to track your Rainy Day's here.</h4>
+    <h4><%= link_to 'Search ', '/search' %> for a new place and add a goal to track your Rainy Day's here.</h4>
 <% end %>
 
 <% @goals.each do |goal| %>

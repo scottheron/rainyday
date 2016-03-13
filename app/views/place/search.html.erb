@@ -1,12 +1,20 @@
-<h1>Search results</h1>
-
-<% if @results %>
-	<% @results["results"].each do |place| %>
-		<h1><%= place["name"] %></h1>
+<div class="container">
+	<h1>Search results for <i><%= @search_term %></i> near <i><%= @zip_code %></i></h1>
+	<br />
+	<% if @results.present? %>
+		<% @results["results"].each do |place| %>
+			<div class="well">
+				<h1><%= place["name"] %></h1>
+				<p><%= place["vicinity"] %></p>
+			</div>
+		<% end %>
+	<% else %>
+		<div class="well">
+			<p>No results found</p>
+			<p><a href="/search">Try again</a></p>
+		</div>
 	<% end %>
-<% else %>
-	<p>No results found.</p>
-<% end %>
+</div>
 
 
 

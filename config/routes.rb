@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  
+
   get 'search' => 'place#index'
   get 'results' => 'place#search'
 
@@ -21,6 +24,8 @@ Rails.application.routes.draw do
   delete 'goal' => "goal#destroy"
 
   get '/achievements' => 'achievements#show'
+
+  get "/(*url)", to: redirect('/404')
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  
-
   get 'search' => 'place#index'
   get 'results' => 'place#search'
 

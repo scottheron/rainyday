@@ -1,5 +1,10 @@
 <h1>My Goals</h1>
 
+<% if @goals.length == 0 %>
+    <h3>You dont have any goals yet.</h3>
+    <h4>Search for a new place and add a goal to track your Rainy Day's here.</h4>
+<% end %>
+
 <% @goals.each do |goal| %>
   <% if goal.user_id === @current_user.id %>
     <h3><%= goal.place.name %></h3>

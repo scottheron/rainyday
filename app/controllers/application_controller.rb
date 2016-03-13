@@ -4,6 +4,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :current_user
 
+  def is_authenticated?
+    unless current_user
+      flash[:warning] = "You need to login to access that"
+      redirect_to root_path
+    end
+  end
+
   def current_user
     @current_user ||= User.find_by_id(session[:user_id])
   end

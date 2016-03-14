@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'search' => 'place#index'
   get 'results' => 'place#search'
-
+  get 'results/details' => 'place#show'
   root 'main#index'
 
   post '/signup' => 'user#create'
@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   delete 'goal' => "goal#destroy"
 
   get '/achievements' => 'achievements#show'
+
+
 
   get "/(*url)", to: redirect('/404')
 

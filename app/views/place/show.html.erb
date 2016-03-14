@@ -1,5 +1,16 @@
-<h1><%= @details["result"]["name"] %></h1>
+<div class="container">
+	<h1><%= @details["result"]["name"] %></h1>
+	<div class="well">
+		<h3><a href="<%= @details['result']['website'] %>" target="_blank">Visit website</a></h3>
+		<h4><%= @details["result"]["formatted_address"] %></h4>
+		<h4><%= @details["result"]["formatted_phone_number"] %></h4>
 
-<h3><a href="<%= @details['result']['website'] %>" target="_blank">Visit website</a></h3>
-<p><%= @details["result"]["formatted_address"] %></p>
-<p><%= @details["result"]["formatted_phone_number"] %></p>
+		<%= form_tag("/places/create", method: "post") do %>
+			<%= hidden_field_tag(:name, @details['result']['name']) %>
+			<%= hidden_field_tag(:url, @details['result']['website']) %>
+			<%= hidden_field_tag(:address, @details['result']['formatted_address']) %>
+			<%= hidden_field_tag(:phone, @details['result']['formatted_phone_number']) %>
+			<%= hidden_field_tag(:place_id, @details['result']['place_id']) %>
+			<%= submit_tag("Save for a rainy day") %>
+		<% end %>
+	</div>

@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get '/logout' => 'session#destroy'
 
   get 'profile' => 'user#show'
+  get 'profile/edit' => 'user#edit'
+  post 'profile/edit' => 'user#update'
 
 
   get 'goal' => "goal#show"

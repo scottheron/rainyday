@@ -22,7 +22,7 @@ class PasswordsController < ApplicationController
     if user && valid && params[:password] 
         user.update(password: params[:password], reset_code: nil, expires_at: nil)
         flash[:success] = 'Password has been reset'
-        redirect_to login_path
+        redirect_to root_path
     else  
         flash[:danger] = 'Invalid reset code/password'
         redirect_to root_path

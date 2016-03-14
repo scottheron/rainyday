@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   uniqueness: {case_sensitive: false}
 
   validates :password,
-  presence: true,
+  presence: true, on: :create,
   length: {
     minimum: 7,
     too_short: "must be greater than %{count} characters"

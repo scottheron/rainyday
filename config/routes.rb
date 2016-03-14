@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'search' => 'place#index'
   get 'results' => 'place#search'
   get 'results/details' => 'place#show'
+  post 'places/create' => 'place#create'
   root 'main#index'
 
   post '/signup' => 'user#create'

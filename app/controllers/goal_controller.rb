@@ -1,5 +1,5 @@
 class GoalController < ApplicationController
-  before_action :is_authenticated?, except: [:index]
+  before_action :is_authenticated?
 
   def show
     @goals = Goal.where(completed: false)

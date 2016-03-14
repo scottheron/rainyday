@@ -1,5 +1,5 @@
 class PlaceController < ApplicationController
-	before_action :is_authenticated?, except: [:index]
+	before_action :is_authenticated?
 
 require 'rest-client'
 

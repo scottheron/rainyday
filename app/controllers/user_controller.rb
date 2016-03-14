@@ -31,7 +31,35 @@ class UserController < ApplicationController
         redirect_to root_path
       end
     end
-  end    
+  end
+
+  def edit
+    @current_zip = Zip.find(@current_user.zip_id)
+  end
+
+  def update
+    current_id = @current_user.id
+    user = User.find(current_id)
+    if user_params == nil
+      flash[:danger] = "Passwords don't match"
+      redirect_to root_path
+    else
+      user.update user_params
+      zipcode = params[:zip][:code]
+      lat = zipcode.to_lat
+      lon = zipcode.to_lon
+      new_zip = Zip.find_or_create_by(code: zipcode) do |z|
+        z.lat = lat
+        z.lng = lon
+      end
+      puts user[:zip_id]
+      puts new_zip[:id]
+      user[:zip_id] = new_zip[:id]
+      user.save
+      flash[:success] = "Your information has been updated"
+      redirect_to root_path
+    end
+  end  
 
   private
 
@@ -49,5 +77,5 @@ class UserController < ApplicationController
       nil
     end
   end 
-    
+
 end

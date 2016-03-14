@@ -8,11 +8,9 @@ require 'rest-client'
 	end
 
 	def create
-		Place.create place_params do |p|
-			# p.user_id = @current_user.id
-			# p.google_id = params[:google_id]
-		end
-		redirect_to goal_path
+		puts place_params
+		Place.create(place_params)
+		redirect_to root_path
 	end
 
 	def search
@@ -40,6 +38,6 @@ require 'rest-client'
 	end
 
 	def place_params
-		params_require(:place)
+		params.require(:place)
 	end
 end

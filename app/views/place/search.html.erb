@@ -3,11 +3,13 @@
 	<br />
 	<% if @results["results"].present? %>
 		<% @results["results"].each do |place| %>
-			<h1><%= place["name"] %></h1>
+			<div class="well">
+				<h1><%= place["name"] %></h1>
 				<%= form_tag("/results/details", method: "get") do %>
   					<%= hidden_field_tag(:place, place["place_id"])  %>
   					<%= submit_tag("More details") %>
 				<% end %>
+			</div>
 		<% end %>
 	<% else %>
 		<div class="well">

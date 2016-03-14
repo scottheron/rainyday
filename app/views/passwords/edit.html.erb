@@ -1,0 +1,5 @@
+<h1>Enter in new password</h1>
+<%= bootstrap_form_tag url: reset_code_path(@code), method: :put do |f| %>
+    <%= f.password_field :password %>
+    <%= f.primary 'Reset Password' %>
+<% end %>

@@ -36,12 +36,18 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    addressable (2.4.0)
     area (0.10.0)
       fastercsv (~> 1.5)
     arel (6.0.3)
+    autoprefixer-rails (6.3.3.1)
+      execjs
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.6)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     bootstrap_form (2.3.0)
     builder (3.2.2)
     byebug (8.2.2)
@@ -74,6 +80,10 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    letter_opener (1.4.1)
+      launchy (~> 2.2)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -168,12 +178,14 @@ PLATFORMS
 DEPENDENCIES
   area
   bcrypt (~> 3.1.7)
+  bootstrap-sass
   bootstrap_form
   byebug
   coffee-rails (~> 4.1.0)
   email_validator
   jbuilder (~> 2.0)
   jquery-rails
+  letter_opener
   pg (~> 0.15)
   rails (= 4.2.5)
   rails_12factor

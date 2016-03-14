@@ -5,12 +5,11 @@ class UserController < ApplicationController
   end
 
   def create
-    puts user_params
     if user_params == nil
       flash[:danger] = "Passwords don't match"
       redirect_to root_path
     else
-      user = User.create user_params
+      user = User.create(user_params)
       zipcode = params[:zip][:code]
       lat = zipcode.to_lat
       lon = zipcode.to_lon

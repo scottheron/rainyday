@@ -6,15 +6,16 @@ Rails.application.routes.draw do
   root 'main#index'
 
   post '/signup' => 'user#create'
-
   post '/login' => 'session#create'
-
   get '/login' => 'session#new'
-  
   get '/logout' => 'session#destroy'
 
-  get 'profile' => 'user#show'
+  get 'reset' => 'passwords#new'
+  post 'reset' => 'passwords#create'
+  get 'reset/:code' => 'passwords#edit', as: :reset_code
+  put 'reset/:code' => 'passwords#update'
 
+  get 'profile' => 'user#show'
 
   get 'goal' => "goal#show"
   get 'goal/new' => "goal#new"

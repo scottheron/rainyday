@@ -3,6 +3,8 @@
 <% if @current_user %>
   <h2><%= @current_user.name %></h2>
   <p><%= @current_user.email %></p>
+  <%= link_to 'Edit', 'profile/edit' %>
 <% else %>
   <% redirect_to action: :index %>
 <% end %>
+

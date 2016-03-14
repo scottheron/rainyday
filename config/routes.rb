@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   put 'reset/:code' => 'passwords#update'
 
   get 'profile' => 'user#show'
+  get 'profile/edit' => 'user#edit'
+  post 'profile/edit' => 'user#update'
 
   get 'goal' => "goal#show"
   get 'goal/new' => "goal#new"

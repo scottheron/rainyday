@@ -7,7 +7,7 @@ class SessionController < ApplicationController
 		if user
 			session[:user_id] = user.id
 			flash[:success] = "You are now logged in."
-			redirect_to root_path
+			redirect_to profile_path
 		else
 			flash[:danger] = "Email and/or password invalid."
 			redirect_to root_path

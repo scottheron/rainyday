@@ -8,6 +8,11 @@
   margin-left: 5%;
 }
 
+.about_pics {
+  border-radius: 50%;
+  max-height: 230px;
+}
+
 #aboutUsLabel {
   text-align: center;
 }
@@ -25,3 +30,6 @@
   margin-bottom: 0;
 }
 
+.thumbnail {
+  border: none;
+}

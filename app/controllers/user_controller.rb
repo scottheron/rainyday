@@ -1,6 +1,4 @@
 class UserController < ApplicationController
-  before_action :is_authenticated?, except: [:index]
-
   def new
     user = User.new
     zip = Zip.new
@@ -27,7 +25,7 @@ class UserController < ApplicationController
       if user.valid?
         session[:user_id] = user.id
         flash[:success] = 'User created and logged in'
-        redirect_to root_path
+        redirect_to profile_path
       else
         messages = user.errors.map { |k, v| "#{k} #{v}" }
         flash[:danger] = "Something's wrong"

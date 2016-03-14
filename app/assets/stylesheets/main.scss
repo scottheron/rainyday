@@ -17,6 +17,27 @@
   text-align: center;
 }
 
+#contributors {
+  float: right;
+  margin-right: 5%;
+}
+
+#copyright {
+  float: left;
+  margin-left: 5%;
+}
+
+footer {
+  border-top: 1px solid black;
+  font-weight: bold;
+  max-height: 100px;
+  text-align: center;
+}
+
+footer a {
+  color: black;
+}
+
 .jumbotron {
   text-align: center;
   margin-top: 0px;

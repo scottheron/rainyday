@@ -52,8 +52,6 @@ class UserController < ApplicationController
         z.lat = lat
         z.lng = lon
       end
-      puts user[:zip_id]
-      puts new_zip[:id]
       user[:zip_id] = new_zip[:id]
       user.save
       flash[:success] = "Your information has been updated"

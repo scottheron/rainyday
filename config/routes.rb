@@ -23,8 +23,10 @@ Rails.application.routes.draw do
   get 'goal/new' => "goal#new"
   post 'goal' => "goal#create"
   delete 'goal' => "goal#destroy"
+  put 'goal' => "goal#update"
 
   get '/achievements' => 'achievements#show'
+  delete '/achievements' => 'achievements#destroy'
 
   get "/(*url)", to: redirect('/404')
 

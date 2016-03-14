@@ -1,7 +1,11 @@
 class UserController < ApplicationController
+ before_action :is_authenticated?, except: [:new, :create]
   def new
     user = User.new
     zip = Zip.new
+  end
+
+  def show
   end
 
   def create

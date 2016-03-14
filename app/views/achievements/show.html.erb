@@ -5,11 +5,15 @@
     <h4>Once you complete a <%= link_to ' Goal ', '/goal' %>it will show up as an achievement here. To get started with a new Goal, <%= link_to ' search ', '/search' %> for a new place and add a goal to track your Rainy Day's on the <%= link_to 'Goals ', '/goal' %> page.</h4>
 <% end %>
 
+
 <% @achievements.each do |a| %>
   <% if a.user_id === @current_user.id %>
-    <div class="container">
-      <h3><%= a.description %></h3>
-      <h4><%= a.place.name %></h4>
-    </div>
+    <% if a.completed %>
+      <div class="container">
+        <h3><%= a.description %></h3>
+        <h4><%= a.place.name %></h4>
+        <%= link_to 'Delete', a, :method => :delete %>
+      </div>
+    <% end %>
   <% end %>
 <% end %>

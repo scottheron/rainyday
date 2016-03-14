@@ -17,14 +17,22 @@ class GoalController < ApplicationController
   end
 
   def destroy
-    @goal = Goal.delete
-    redirect_to root_path
+    Goal.find(params[:format]).delete
+    flash[:success] = "Entry has been deleted"
+    redirect_to goal_path
+  end
+
+  def update
+    complete = Goal.find(params[:format])
+    complete.update(completed: true)
+    flash[:success] = "Task completed and added to your achievements. I knew you could do it!"
+    redirect_to goal_path
   end
 
   private
 
   def goal_params
-    params_require(:goal).permit(:description)
+    # params_require(:goal).permit(:description)
   end
 
 end

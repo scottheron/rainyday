@@ -5,4 +5,9 @@ class AchievementsController < ApplicationController
     @achievements = Goal.where(completed: true)
   end
 
+  def destroy
+    delete_goal = Goal.find(params[:id])
+    redirect_to '/achievements'
+  end
+
 end

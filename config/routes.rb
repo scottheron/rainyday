@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   get '/login' => 'session#new'
   get '/logout' => 'session#destroy'
 
+  get 'reset' => 'passwords#new'
+  post 'reset' => 'passwords#create'
+  get 'reset/:code' => 'passwords#edit', as: :reset_code
+  put 'reset/:code' => 'passwords#update'
+
   get 'profile' => 'user#show'
   get 'profile/edit' => 'user#edit'
   post 'profile/edit' => 'user#update'

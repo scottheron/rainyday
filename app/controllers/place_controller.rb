@@ -18,7 +18,8 @@ class PlaceController < ApplicationController
 			@zip_code = user.zip.code
 			lat = user.zip.lat.to_s
 			lng = user.zip.lng.to_s
-			results = RestClient.get 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+lat+','+lng+'&radius=10000&keyword='+@search_term+'&key='+ENV['GOOGLE_PLACES_KEY']
+			results = RestClient.get 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='
+			  +lat+','+lng+'&radius=10000&keyword='+@search_term+'&key='+ENV['GOOGLE_PLACES_KEY']
 			@results = JSON.parse(results)
 			puts results
 		end
@@ -26,7 +27,8 @@ class PlaceController < ApplicationController
 	def show
 		#take param
 		place_id = params[:place].to_s
-		details = RestClient.get 'https://maps.googleapis.com/maps/api/place/details/json?placeid='+place_id+'&key='+ENV['GOOGLE_PLACES_KEY']
+		details = RestClient.get 'https://maps.googleapis.com/maps/api/place/details/json?placeid='
+		  +place_id+'&key='+ENV['GOOGLE_PLACES_KEY']
 		@details = JSON.parse(details)
 	end
 	def search_params

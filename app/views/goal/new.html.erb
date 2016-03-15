@@ -1,10 +1,8 @@
+<!-- Form to add an achievement (Goal) to the location the user wants to save -->
 <h1>Add an acheivement!</h1>
-
 <h2><a href="<%= @place.url %>"> <%= @place.name %> </a></h2>
-
 <h3><%= @place.address %></h3>
 <h3><%= @place.phone %></h3>
-
 <div>
   <%= bootstrap_form_for :goal do |goal| %>
     <%= goal.text_area :description %>

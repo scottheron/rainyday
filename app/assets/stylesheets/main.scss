@@ -17,6 +17,10 @@
   text-align: center;
 }
 
+.col-xs-1 {
+  text-align: center;
+}
+
 #contributors {
   float: right;
   margin-right: 5%;
@@ -38,17 +42,23 @@ footer a {
   color: black;
 }
 
+#goalH1 {
+  text-align: center;
+}
+
 .jumbotron {
   text-align: center;
   margin-top: 0px;
 }
 
-.col-xs-1 {
-  text-align: center;
-}
-
 .navbar {
   margin-bottom: 0;
+}
+
+#noGoal {
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
 }
 
 .thumbnail {

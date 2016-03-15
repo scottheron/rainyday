@@ -22,6 +22,7 @@ require 'rest-client'
 			lng = user.zip.lng.to_s
 			results = RestClient.get 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+lat+','+lng+'&radius=10000&keyword='+@search_term+'&key='+ENV['GOOGLE_PLACES_KEY']
 			@results = JSON.parse(results)
+			puts results
 		end
 	end
 

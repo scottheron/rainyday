@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 #about_us {
   text-align: center;
   margin-right: 5%;
@@ -18,7 +19,9 @@
 }
 
 body {
-  background-color: #89bdd3;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .col-xs-4 {
@@ -66,13 +69,56 @@ footer a {
   background-color: #CECECE;
 }
 
-.jumbotron {
+#section-1 {
+  background-image: asset-url('girl-park-umbrella1280.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  left: 0;
   text-align: center;
-  margin-top: 0px;
+  color: white;
+  padding: 2%;
+}
+
+#title {
+  font-family: 'Comfortaa', cursive;
+  font-size: 90px;
+  color: #3fb0ac;
+  font-weight: bold;
+}
+
+#subtitle {
+  font-family: 'Dancing Script', cursive;
+  font-size: 45px;
+}
+
+#subtitle-2 {
+  padding: 1%;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  font-size: 40px;
+  color: #3fb0ac;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0;
+  border-radius: 0;
+}
+
+#btns-public {
+  margin-top: 700px;
 }
 
 .main_btns {
-  margin-left: 5%;
+  margin: 5%;
+  width: 100px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #3fb0ac;
+  color: white;
+  border: 0;
 }
 
 .navbar {
@@ -118,6 +164,7 @@ footer a {
   text-align: center;
   margin-right: 25%;
   margin-left: 25%;
+
 }
 
 .use_case {

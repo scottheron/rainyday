@@ -1,4 +1,4 @@
-<h1 id='goalH1'>My Goals</h1>
+<h1 id='goalH1'>My Rainy Day List</h1>
 
 <% if @goals.length == 0 %>
   <div id='noGoal'>
@@ -10,7 +10,7 @@
 <% @goals.each do |goal| %>
   <% if goal.user_id === @current_user.id && goal.completed === false %>
     <div class="container goals">
-      <h3><%= goal.place.name %></h3>
+      <h3><a href=<%= goal.place.url %>><%= goal.place.name %></a></h3>
       <h4><%= goal.description %></h4>
       <h5>
         <%= link_to 'UNLOCK ACHIEVEMENT', goal, :method => :put %>

@@ -1,26 +1,31 @@
-<h1 id='goalH1'>My Rainy Day List</h1>
+<div id='goal-body'>
 
-<% if @goals.length == 0 %>
-  <div id='noGoal'>
-    <h3>You dont have any goals yet.</h3>
-    <h4><%= link_to 'Search ', '/search' %> for a new place and add a goal to track your Rainy Day's here.</h4>
+  <div id='goal-header'>
+    <h1 id='goalH1'>My Rainy Day List</h1>
+    <h3>Tasks saved for a rainy day.</h3>
   </div>
-<% end %>
 
-<% @goals.each do |goal| %>
-  <% if goal.user_id === @current_user.id && goal.completed === false %>
-    <div class="container goals">
-      <h3><a href=<%= goal.place.url %>><%= goal.place.name %></a></h3>
-      <h4><%= goal.description %></h4>
-      <h5>
-        <%= link_to 'UNLOCK THIS ACHIEVEMENT', goal, :method => :put %>
-        <%= image_tag("trophy2.png", height: '100px', alt: "trophy") %>
-      </h5>
-      <h5><%= link_to 'Delete this Achievement', goal, :method => :delete %></h5>
-      
+  <% if @goals.length == 0 %>
+    <div id='noGoal'>
+      <h3>You dont have any goals yet.</h3>
+      <h4><%= link_to 'Search ', '/search' %> for a new place and add a goal to track your Rainy Day's here.</h4>
     </div>
   <% end %>
-<% end %>
 
+  <% @goals.each do |goal| %>
+    <% if goal.user_id === @current_user.id && goal.completed === false %>
+      <div class="container goals">
+        <h3><a href=<%= goal.place.url %>><%= goal.place.name %></a></h3>
+        <h4><%= goal.description %></h4>
+        <h4>
+          <%= link_to 'UNLOCK THIS ACHIEVEMENT', goal, :method => :put %>
+          <%= image_tag("trophy2.png", height: '100px', alt: "trophy") %>
+        </h4>
+        <h5><%= link_to 'Delete this Achievement', goal, class: 'delete-button', :method => :delete %></h5>
+        
+      </div>
+    <% end %>
+  <% end %>
 
+</div>
 

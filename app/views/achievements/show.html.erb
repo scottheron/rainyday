@@ -1,22 +1,29 @@
-<h1 id='achievementH1'>My Achievements</h1>
+<div id='achievement-body'>
 
-<% if @user_achievements.length == 0 %>
-  <div id='noAchievement'>
-    <h3>You dont have any achievements yet.</h3>
-    <h4>Once you complete a <%= link_to ' Goal ', '/goal' %>it will show up as an achievement here. To get started with a new Goal, <%= link_to ' search ', '/search' %> for a new place and add a goal to track your Rainy Day's on the <%= link_to 'Goals ', '/goal' %> page.</h4>
+  <div id='achievement-header'>
+    <h1 id='achievementH1'>My Achievements</h1>
+    <h3> Revel in your accomplishments </h3>
   </div>
-<% end %>
+
+  <% if @user_achievements.length == 0 %>
+    <div id='noAchievement'>
+      <h3>You dont have any achievements yet.</h3>
+      <h4>Once you complete a <%= link_to ' Goal ', '/goal' %>it will show up as an achievement here. To get started with a new Goal, <%= link_to ' search ', '/search' %> for a new place and add a goal to track your Rainy Day's on the <%= link_to 'Goals ', '/goal' %> page.</h4>
+    </div>
+  <% end %>
 
 
-<% @achievements.each do |a| %>
-  <% if a.user_id === @current_user.id %>
-    <% if a.completed %>
-      <div class="container achievements">
-        <%= image_tag("trophy2.png", height: '100px', alt: "trophy") %>
-        <h3><%= a.description %></h3>
-        <h4><a href=<%= a.place.url %>><%= a.place.name %></a></h4>
-        <%= link_to 'Delete', a, :method => :delete %>
-      </div>
+  <% @achievements.each do |a| %>
+    <% if a.user_id === @current_user.id %>
+      <% if a.completed %>
+        <div class="container achievements">
+          <%= image_tag("trophy2.png", height: '100px', alt: "trophy") %>
+          <h3><%= a.description %></h3>
+          <h4><a href=<%= a.place.url %>><%= a.place.name %></a></h4>
+          <h5><%= link_to 'Delete', a, class: 'delete-button', :method => :delete %></h5>
+        </div>
+      <% end %>
     <% end %>
   <% end %>
-<% end %>
+
+</div>

@@ -1,6 +1,11 @@
-<h1>Forgot Password?</h1>
+<div id='forgotPass'>
+  <%= image_tag('mountain.jpg', id: 'forgotPasswordPg') %>
+</div>
+  <h1 id='forgotPasswordH1'>Forgot Password?</h1>
 
-<%= bootstrap_form_tag url: reset_path do |f| %>
-    <%= f.email_field :email %>
-    <%= f.primary 'Send Email Reset' %>
-<% end %>
+  <div class='container forgotPassword'>
+    <%= bootstrap_form_tag url: reset_path do |f| %>
+        <%= f.email_field :email %>
+        <%= f.primary 'Send Email Reset' %>
+    <% end %>
+  </div>

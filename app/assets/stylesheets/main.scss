@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.achievements, .goals {
+  background-color: #9ad3de;
+  border: 3px solid #e3e3e3;
+  margin-top: 10px;
+  max-width: 40%;
+  text-align: center;
+}
+
+#achievementH1, #goalH1 {
+  text-align: center;
+}
 
 #about_us {
   text-align: center;
@@ -22,6 +33,10 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+}
+
+#btns-public {
+  margin-top: 700px;
 }
 
 .col-xs-4 {
@@ -53,62 +68,38 @@ footer a {
   color: black;
 }
 
-.goals, .achievements {
-  background-color: #9ad3de;
-  border: 3px solid #e3e3e3;
-  margin-top: 10px;
-  max-width: 40%;
-  text-align: center;
+#forgotPass {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -5;
 }
 
-#goalH1, #achievementH1 {
-  text-align: center;
+.forgotPassword {
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  max-width: 30%;
+  z-index: 1;
+}
+
+.forgotPassword .btn-primary {
+  background-color: #6080A9;
+  border-color: #7F8DA8;
+}
+
+#forgotPasswordH1 {
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+#forgotPasswordPg {
+  height: 100%;
+  width: 100%;
 }
 
 .glyphicon-search {
   background-color: #CECECE;
-}
-
-#section-1 {
-  background-image: asset-url('girl-park-umbrella1280.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  min-height: 100%;
-  min-width: 100%;
-  left: 0;
-  text-align: center;
-  color: white;
-  padding: 2%;
-}
-
-#title {
-  font-family: 'Comfortaa', cursive;
-  font-size: 90px;
-  color: #3fb0ac;
-  font-weight: bold;
-}
-
-#subtitle {
-  font-family: 'Dancing Script', cursive;
-  font-size: 45px;
-}
-
-#subtitle-2 {
-  padding: 1%;
-  text-align: center;
-  font-family: 'Comfortaa', cursive;
-  font-size: 40px;
-  color: #3fb0ac;
-  font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 0;
-  border-radius: 0;
-}
-
-#btns-public {
-  margin-top: 700px;
 }
 
 .main_btns {
@@ -153,11 +144,46 @@ footer a {
   text-align: center;
 }
 
-#noGoal h3, #noGoal h4 {
+#section-1 {
+  background-image: asset-url('girl-park-umbrella1280.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  left: 0;
+  text-align: center;
+  color: white;
+  padding: 2%;
+}
+
+#subtitle {
+  font-family: 'Dancing Script', cursive;
+  font-size: 45px;
+}
+
+#subtitle-2 {
+  padding: 1%;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  font-size: 40px;
+  color: #3fb0ac;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0;
+  border-radius: 0;
 }
 
 .thumbnail {
   border: none;
+}
+
+#title {
+  font-family: 'Comfortaa', cursive;
+  font-size: 90px;
+  color: #3fb0ac;
+  font-weight: bold;
 }
 
 #use_cases {

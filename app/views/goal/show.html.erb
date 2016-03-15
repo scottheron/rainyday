@@ -1,16 +1,20 @@
-<h1>My Goals</h1>
+<h1 id='goalH1'>My Goals</h1>
 
 <% if @goals.length == 0 %>
+  <div id='noGoal'>
     <h3>You dont have any goals yet.</h3>
     <h4><%= link_to 'Search ', '/search' %> for a new place and add a goal to track your Rainy Day's here.</h4>
+  </div>
 <% end %>
 
 <% @goals.each do |goal| %>
   <% if goal.user_id === @current_user.id && goal.completed === false %>
-    <h3><%= goal.place.name %></h3>
-    <h4><%= goal.description %></h4>
-    <%= link_to 'destroy', goal, :method => :delete %>
-    <%= link_to 'update', goal, :method => :put %>
+    <div class="well">
+      <h3><%= goal.place.name %></h3>
+      <h4><%= goal.description %></h4>
+      <%= link_to 'destroy', goal, :method => :delete %>
+      <%= link_to 'update', goal, :method => :put %>
+    </div>
   <% end %>
 <% end %>
 

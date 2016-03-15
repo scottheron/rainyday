@@ -17,6 +17,10 @@
   text-align: center;
 }
 
+body {
+  background-color: #3fb0ac;
+}
+
 .col-xs-4 {
   text-align: center;
 }
@@ -32,7 +36,6 @@
 }
 
 footer {
-  background-color: white;
   border-top: 1px solid black;
   bottom: 0;
   font-weight: bold;
@@ -47,6 +50,11 @@ footer a {
   color: black;
 }
 
+#goalH1 {
+  color: #173e43;
+  text-align: center;
+}
+
 .jumbotron {
   text-align: center;
   margin-top: 0px;
@@ -58,6 +66,24 @@ footer a {
 
 .navbar {
   margin-bottom: 0;
+}
+
+.navbar-default, footer{
+  background-color: #dddfd4;
+}
+
+#noGoal {
+  background-color: #fae596;
+  border: 10px solid #173e43;
+  margin: 2% 35%;
+  max-width: 600px;
+  min-width: 200px;
+  padding: 2% 5%;
+  text-align: center;
+}
+
+#noGoal h3, #noGoal h4 {
+  color: #173e43;
 }
 
 .thumbnail {

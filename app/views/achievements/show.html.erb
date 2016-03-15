@@ -12,8 +12,9 @@
   <% if a.user_id === @current_user.id %>
     <% if a.completed %>
       <div class="container achievements">
+        <%= image_tag("trophy2.png", height: '100px', alt: "trophy") %>
         <h3><%= a.description %></h3>
-        <h4><%= a.place.name %></h4>
+        <h4><a href=<%= a.place.url %>><%= a.place.name %></a></h4>
         <%= link_to 'Delete', a, :method => :delete %>
       </div>
     <% end %>

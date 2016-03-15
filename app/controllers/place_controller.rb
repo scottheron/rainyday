@@ -9,8 +9,8 @@ require 'rest-client'
 
 	def create
 		puts place_params
-		Place.create(place_params)
-		redirect_to root_path
+		new_place = Place.find_or_create_by(place_params) 
+		redirect_to "/goal/new/#{new_place.id}"
 	end
 
 	def search
@@ -38,6 +38,6 @@ require 'rest-client'
 	end
 
 	def place_params
-		params.require(:place)
+		params.require(:place).permit(:name, :url, :address, :phone, :place_id)
 	end
 end

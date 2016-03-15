@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   get 'search' => 'place#index'
   get 'results' => 'place#search'
   get 'results/details' => 'place#show'
-  post 'places/create' => 'place#create'
+  post 'results/details' => 'place#create'
   root 'main#index'
+
+
 
   post '/signup' => 'user#create'
   post '/login' => 'session#create'
@@ -21,8 +23,8 @@ Rails.application.routes.draw do
   post 'profile/edit' => 'user#update'
 
   get 'goal' => "goal#show"
-  get 'goal/new' => "goal#new"
-  post 'goal' => "goal#create"
+  get 'goal/new/:id' => "goal#new"
+  post 'goal/new/:id' => "goal#create"
   delete 'goal' => "goal#destroy"
   put 'goal' => "goal#update"
 

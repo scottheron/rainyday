@@ -1,10 +1,16 @@
 <h1>Add an acheivement!</h1>
 
-<%= form_for @goal do |f| %>
+<h2><a href="<%= @place.url %>"> <%= @place.name %> </a></h2>
 
-  <%= f.label :description %>
-  <%= f.text_area :description %>
+<h3><%= @place.address %></h3>
+<h3><%= @place.phone %></h3>
 
-  <%= f.submit %>
-
-<% end %>
+<div>
+  <%= bootstrap_form_for :goal do |goal| %>
+    <%= goal.text_area :description %>
+    <%= goal.hidden_field :completed, value: false %>
+    <%= goal.hidden_field :place_id, value: @place.id %>
+    <%= goal.hidden_field :user_id, value: @user.id %>
+    <%= submit_tag("Set my acheivement!") %>
+  <% end %>
+</div>

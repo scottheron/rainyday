@@ -1,7 +1,8 @@
+# Password Controller to create, edit and update the password. Create and update also integrate a mailer
+# to send a reset link to the user
 class PasswordsController < ApplicationController
   def new
   end
-
   def create
     user = User.find_by_email(params[:email])
     if user
@@ -11,11 +12,9 @@ class PasswordsController < ApplicationController
     flash[:warning] = 'Password reset sent if mail exists'
     redirect_to root_path
   end
-
   def edit
     @code = params[:code]
   end
-
   def update
     user = User.find_by_reset_code(params[:code])
     valid = user.expires_at > Time.now.utc

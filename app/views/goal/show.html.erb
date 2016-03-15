@@ -9,7 +9,7 @@
 
 <% @goals.each do |goal| %>
   <% if goal.user_id === @current_user.id && goal.completed === false %>
-    <div class="container">
+    <div class="container goals">
       <h3><%= goal.place.name %></h3>
       <h4><%= goal.description %></h4>
       <%= link_to 'destroy', goal, :method => :delete %>

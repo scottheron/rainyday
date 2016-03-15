@@ -17,6 +17,10 @@
   text-align: center;
 }
 
+.col-xs-4 {
+  text-align: center;
+}
+
 #contributors {
   float: right;
   margin-right: 5%;
@@ -28,10 +32,15 @@
 }
 
 footer {
+  background-color: white;
   border-top: 1px solid black;
+  bottom: 0;
   font-weight: bold;
+  left: 0;
   max-height: 100px;
+  position: fixed;
   text-align: center;
+  width: 100%;
 }
 
 footer a {
@@ -43,8 +52,8 @@ footer a {
   margin-top: 0px;
 }
 
-.col-xs-1 {
-  text-align: center;
+.main_btns {
+  margin-left: 5%;
 }
 
 .navbar {
@@ -53,4 +62,14 @@ footer a {
 
 .thumbnail {
   border: none;
+}
+
+#use_cases {
+  text-align: center;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+.use_case {
+  max-width: 250px;
 }

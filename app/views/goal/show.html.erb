@@ -12,8 +12,12 @@
     <div class="container goals">
       <h3><%= goal.place.name %></h3>
       <h4><%= goal.description %></h4>
-      <%= link_to 'destroy', goal, :method => :delete %>
-      <%= link_to 'update', goal, :method => :put %>
+      <h5>
+        <%= link_to 'UNLOCK THIS ACHIEVEMENT', goal, :method => :put %>
+        <%= image_tag("trophy2.png", height: '100px', alt: "trophy") %>
+      </h5>
+      <h5><%= link_to 'Delete this Achievement', goal, :method => :delete %></h5>
+      
     </div>
   <% end %>
 <% end %>

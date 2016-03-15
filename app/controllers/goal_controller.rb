@@ -6,14 +6,14 @@ class GoalController < ApplicationController
   end
 
   def new
+    @place = Place.find(params[:id])
     @goal = Goal.new
+    @user = User.find(@current_user[:id])
   end
 
   def create
     goal = Goal.create(goal_params)
-    # goal = @current_user.goals.create(goal_params)
-    # goal[place_id] = @current_place
-    redirect_to root_path
+    redirect_to goal_path
   end
 
   def destroy
@@ -32,7 +32,7 @@ class GoalController < ApplicationController
   private
 
   def goal_params
-    # params_require(:goal).permit(:description)
+    params.require(:goal).permit(:description, :completed, :place_id, :user_id)
   end
 
 end

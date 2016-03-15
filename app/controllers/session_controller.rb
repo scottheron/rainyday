@@ -1,4 +1,4 @@
-
+# Sessions controller manages the user sessions and provides feedback via flash messages. 
 class SessionController < ApplicationController
 	def new
 	end

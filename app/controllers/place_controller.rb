@@ -18,8 +18,11 @@ require 'rest-client'
 		if search_params
 			@search_term = params[:q].to_s
 			user = @current_user
-
-			zipcode = zip_params[:code]
+			if zip_params[:code] == ''
+				zipcode = user.zip.code
+			else
+				zipcode = zip_params[:code]
+			end
 			this_zip = Zip.find_or_create_by(code: zipcode) do |z|
 				z.lat = zipcode.to_lat
 				z.lng = zipcode.to_lon
@@ -29,7 +32,7 @@ require 'rest-client'
 			lng = this_zip.lng.to_s
 			results = RestClient.get 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+lat+','+lng+'&radius=10000&keyword='+@search_term+'&key='+ENV['GOOGLE_PLACES_KEY']
 			@results = JSON.parse(results)
-			@zip_code = params[:code]
+			@zip_code = zipcode
 			puts results
 		end
 	end

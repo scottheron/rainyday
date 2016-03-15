@@ -5,8 +5,12 @@
 
 #about_us {
   text-align: center;
-  margin-right: 5%;
-  margin-left: 5%;
+  background-color: #6ed3cf;
+  position: absolute;
+  width: 100%;
+  color: white;
+  padding: 0 5% 10% 5%;
+  margin: 0; 
 }
 
 .about_pics {
@@ -28,25 +32,17 @@ body {
   text-align: center;
 }
 
-#contributors {
-  float: right;
-  margin-right: 5%;
-}
-
-#copyright {
-  float: left;
-  margin-left: 5%;
-}
-
 footer {
-  border-top: 1px solid #e3e3e3;
+  background-color: rgba(255, 255, 255, .7);
   bottom: 0;
-  font-weight: bold;
   left: 0;
-  max-height: 100px;
+  font-size: 16px;
+  line-height: 16px;
+  min-height: 45px;
+  line-height: 45px;
   position: fixed;
-  text-align: center;
   width: 100%;
+  clear: left;
 }
 
 footer a {
@@ -81,12 +77,13 @@ footer a {
   text-align: center;
   color: white;
   padding: 2%;
+  display: inline-block;
 }
 
 #title {
   font-family: 'Comfortaa', cursive;
   font-size: 90px;
-  color: #3fb0ac;
+  color: #6ed3cf;
   font-weight: bold;
 }
 
@@ -100,15 +97,20 @@ footer a {
   text-align: center;
   font-family: 'Comfortaa', cursive;
   font-size: 40px;
-  color: #3fb0ac;
+  color: #6ed3cf;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.2);
   border: 0;
   border-radius: 0;
 }
 
-#btns-public {
-  margin-top: 700px;
+.top {
+  margin-bottom: 100px;
+}
+
+.section-2 {
+  display: inline-block;
+  margin-top: 750px;
 }
 
 .main_btns {
@@ -116,21 +118,34 @@ footer a {
   width: 100px;
   font-size: 16px;
   text-align: center;
-  background-color: #3fb0ac;
+  background-color: red;
   color: white;
   border: 0;
+  margin-bottom: 15%;
+  border-radius: 0;
+}
+
+.btn:hover {
+  background-color: #6ed3cf;
+}
+
+#nav-link {
+  color: white;
 }
 
 .navbar {
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: 3px solid #e3e3e3;
+  background-color: #173e43;
+  border: none;
+  border-radius: 0;
   margin-bottom: 0;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
-.navbar-default, footer{
-  background-color: #c9c9c9;
+#navbar-brand {
+  color: white;
+  font-family: 'Comfortaa', cursive;
+  font-size: 22px;
 }
 
 #noAchievement {
@@ -164,9 +179,9 @@ footer a {
   text-align: center;
   margin-right: 25%;
   margin-left: 25%;
-
+  min-height: 280px;
 }
 
 .use_case {
-  max-width: 250px;
+  max-width: 300px;
 }

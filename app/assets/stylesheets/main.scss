@@ -68,11 +68,34 @@ footer a {
   color: black;
 }
 
-#forgotPass {
-  left: 0;
+.goals, .achievements {
+  background-color: rgba(144, 195, 212, 0.85);
+  border: 3px solid #f8bd25;
+  margin-top: 10px;
+  max-width: 40%;
+  text-align: center;
+}
+
+#goalH1, #achievementH1 {
+  text-align: center;
+}
+
+.glyphicon-search {
+  background-color: #CECECE;
+}
+
+#section-1 {
+  background-image: asset-url('girl-park-umbrella1280.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: absolute;
-  top: 0;
-  z-index: -5;
+  min-height: 100%;
+  min-width: 100%;
+  left: 0;
+  text-align: center;
+  color: white;
+  padding 2%;
 }
 
 .forgotPassword {

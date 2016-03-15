@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Questrial|Comfortaa:400,300,700|Dancing+Script:400,700' rel='stylesheet' type='text/css'>
     <title>Rainyday</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -30,12 +31,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to ' Places', '/search', class: 'glyphicon glyphicon-search pull-right', style: "color:black" %></li>
-              <li><a style="color:black" href="/goal">My List</a></li>
-              <li><a style="color:black" href="/achievements">Achievements</a></li>
-              <li><a style="color:black" href="/profile">Profile</a></li>
-              <li><%= link_to 'About Us', '/#about_us', style: "color:black" %></li>
-              <li><a style="color:black" href="/logout">Logout</a></li>
+              <%= link_to ' Places', '/search', class: 'btn btn-primary glyphicon glyphicon-search pull-right' %>
+              <li><a style="color:#173e43" href="/goal">Goals</a></li>
+              <li><a style="color:#173e43" href="/achievements">Achievements</a></li>
+              <li><a style="color:#173e43" href="/profile">My Profile</a></li>
+              <li style="color:#173e43"><%= link_to 'About Us', '/#about_us' %></li>
+              <li><a style="color:#173e43" href="/logout">Logout</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -48,7 +49,7 @@
     </div>
     <div id='footer'>
       <footer>
-        <span id="copyright"><i class="fa fa-copyright"></i> Rainy Day App 2016. All Right Reserved.  WDI-Project3.</span>
+        <span id="copyright"><i class="fa fa-copyright"></i> Rainy Day 2016. All Right Reserved.  WDI-Project3.</span>
         <span id="contributors">
           Contributors: 
           <a href="https://github.com/katiosity">Kathy</a>, 

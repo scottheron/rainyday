@@ -1,61 +1,61 @@
-<div class="jumbotron">
-  <h1 id="title">Rainy Day</h1>
-  <p>Create a list of things you would like to do on a rainy day</p>
-</div>
+<div class="container">
+    <div id="section-1">
+      <h1 id="title">Rainy Day</h1>
+      <h3 id="subtitle">Because when it pours, you'll need something fun to do</h3>
+      <br />
+      <br />
+      <br />
+      <a href="#use_cases" type="button" class="btn btn-primary btn-lg" id="subtitle-2">How it works</a>
+  </div>
 
+  <div class="row" id="btns-public">
+    <% if !@current_user %>
+      <div class="col-xs-4">
+      </div>
+      <div class="col-xs-4">
+        <%= link_to 'Login', '#login', class:'btn btn-primary main_btns', data: {:toggle => 'modal'} %>
+        <%= link_to 'About Us', '#about_us', class:'btn btn-primary main_btns' %>
+        <%= link_to 'Sign Up', '#signup', class:'btn btn-primary main_btns', data: {:toggle => 'modal'} %>
+      </div>
+      <div class="col-xs-4">
+      </div>
+    <% end %>
+  </div>
 
-<div class="row">
-  
-  <% if !@current_user %>
-    <div class="col-xs-4">
-    </div>
-    <div class="col-xs-4">
-      <%= link_to 'Login', '#login', class:'btn btn-primary main_btns', data: {:toggle => 'modal'} %>
-      <%= link_to 'About Us', '#about_us', class:'btn btn-primary main_btns' %>
-      <%= link_to 'Sign Up', '#signup', class:'btn btn-primary main_btns', data: {:toggle => 'modal'} %>
-    </div>
-    <div class="col-xs-4">
-    </div>
-  <% end %>
-  
-</div>
-
-<br>
-<br>
-
-<div id='use_cases'>
-  <div class="row">
-    <div class="col-sm-6 col-md-4 use_case">
-      <div class="thumbnail">
-        <i class="fa fa-plane fa-5x"></i>
-        <div class="caption">
-          <h3>Search</h3>
-          <p>Always wanted to explore your town, but feel like your too busy? Save those trips for a rainy day.</p>
+<div class="container-fluid">
+  <div id='use_cases'>
+    <div class="row">
+      <div class="col-sm-6 col-md-4 use_case">
+        <div class="thumbnail">
+          <i class="fa fa-plane fa-5x"></i>
+          <div class="caption">
+            <h3>Search</h3>
+            <p>Always wanted to explore your town, but feel like your too busy? Save those trips for a rainy day.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-sm-6 col-md-4 use_case">
-      <div class="thumbnail">
-        <i class="fa fa-list fa-5x"></i>
-        <div class="caption">
-          <h3>Create a list</h3>
-          <p>Selecting a destination and adding a goal to complete at that destination will populate in your Goal page.</p>
+      <div class="col-sm-6 col-md-4 use_case">
+        <div class="thumbnail">
+          <i class="fa fa-list fa-5x"></i>
+          <div class="caption">
+            <h3>Create a list</h3>
+            <p>Selecting a destination and adding a goal to complete at that destination will populate in your Goal page.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-sm-6 col-md-4 use_case">
-      <div class="thumbnail">
-        <i class="fa fa-trophy fa-5x"></i>
-        <div class="caption">
-          <h3>Achieve</h3>
-          <p>Once you have completed a goal, it will populate into your achievements page where you can view all of your accomplishments</p>
+      <div class="col-sm-6 col-md-4 use_case">
+        <div class="thumbnail">
+          <i class="fa fa-trophy fa-5x"></i>
+          <div class="caption">
+            <h3>Achieve</h3>
+            <p>Once you have completed a goal, it will populate into your achievements page where you can view all of your accomplishments</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<br>
 
 <div id="about_us">
 <h2 id="aboutUsLabel">About us</h2>
@@ -114,51 +114,46 @@
 </div>
 
 </div>
-
-<div class="modal fade" id="login">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Login to Rainy Day</h4>
+  <div class="modal fade" id="login">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Login to Rainy Day</h4>
+        </div>
+        <div class="modal-body">
+          <h1>Login</h1>
+          <%= bootstrap_form_for :user, url: '/login' do |user| %>
+          <%= user.email_field :email %>
+          <%= user.password_field :password %>
+          <%= user.primary 'login' %>
+          <a class="btn btn-primary" href="/reset" role="button">Forgot Password?</a>
+          <% end %>
+        </div>
       </div>
-      <div class="modal-body">
-        <h1>Login</h1>
-        <%= bootstrap_form_for :user, url: '/login' do |user| %>
-        <%= user.email_field :email %>
-        <%= user.password_field :password %>
-        <%= user.primary 'login' %>
-        <a class="btn btn-primary" href="/reset" role="button">Forgot Password?</a>
-        <% end %>
-      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="signup">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Sign up for Rainy Day</h4>
+        </div>
+        <div class="modal-body">
+          <h1>Sign Up</h1>
+          <%= bootstrap_form_for :user, url: '/signup' do |user| %>
+            <%= user.text_field :name %>
+            <%= user.email_field :email %>
+            <%= user.password_field :password %>
+            <%= user.password_field :password_confirmation %>
+            <%= bootstrap_form_for :zip do |zip| %>
+            <%= zip.text_field :code %>
+            <%= user.primary 'Signup' %>
+            <% end %>
+          <% end %>
+        </div>
     </div>
   </div>
 </div>
-
-
-<div class="modal fade" id="signup">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Sign up for Rainy Day</h4>
-      </div>
-      <div class="modal-body">
-        <h1>Sign Up</h1>
-
-        <%= bootstrap_form_for :user, url: '/signup' do |user| %>
-          <%= user.text_field :name %>
-          <%= user.email_field :email %>
-          <%= user.password_field :password %>
-          <%= user.password_field :password_confirmation %>
-          <%= bootstrap_form_for :zip do |zip| %>
-            <%= zip.text_field :code %>
-          
-          <%= user.primary 'Signup' %>
-          <% end %>
-        <% end %>
-
-      </div>
-    </div>
-  </div>
 </div>

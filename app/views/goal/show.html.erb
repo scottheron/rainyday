@@ -1,12 +1,11 @@
+<!-- Displays the users goals and if there are none promts them to search for a place to attach one -->
 <h1 id='goalH1'>My Goals</h1>
-
 <% if @goals.length == 0 %>
   <div id='noGoal'>
     <h3>You dont have any goals yet.</h3>
     <h4><%= link_to 'Search ', '/search' %> for a new place and add a goal to track your Rainy Day's here.</h4>
   </div>
 <% end %>
-
 <% @goals.each do |goal| %>
   <% if goal.user_id === @current_user.id && goal.completed === false %>
     <div class="container goals">

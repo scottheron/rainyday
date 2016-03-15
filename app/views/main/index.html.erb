@@ -2,27 +2,23 @@
   <h1 id="title">Rainy Day</h1>
   <p>Create a list of things you would like to do on a rainy day</p>
 </div>
-
-
 <div class="row">
-  
   <% if !@current_user %>
     <div class="col-xs-4">
     </div>
     <div class="col-xs-4">
-      <%= link_to 'Login', '#login', class:'btn btn-primary main_btns', data: {:toggle => 'modal'} %>
+      <%= link_to 'Login', '#login', class:'btn btn-primary main_btns', 
+        data: {:toggle => 'modal'} %>
       <%= link_to 'About Us', '#about_us', class:'btn btn-primary main_btns' %>
-      <%= link_to 'Sign Up', '#signup', class:'btn btn-primary main_btns', data: {:toggle => 'modal'} %>
+      <%= link_to 'Sign Up', '#signup', class:'btn btn-primary main_btns', 
+        data: {:toggle => 'modal'} %>
     </div>
     <div class="col-xs-4">
     </div>
   <% end %>
-  
 </div>
-
 <br>
 <br>
-
 <div id='use_cases'>
   <div class="row">
     <div class="col-sm-6 col-md-4 use_case">
@@ -30,7 +26,8 @@
         <i class="fa fa-plane fa-5x"></i>
         <div class="caption">
           <h3>Search</h3>
-          <p>Always wanted to explore your town, but feel like your too busy? Save those trips for a rainy day.</p>
+          <p>Always wanted to explore your town, but feel like your too busy? 
+            Save those trips for a rainy day.</p>
         </div>
       </div>
     </div>
@@ -39,7 +36,8 @@
         <i class="fa fa-list fa-5x"></i>
         <div class="caption">
           <h3>Create a list</h3>
-          <p>Selecting a destination and adding a goal to complete at that destination will populate in your Goal page.</p>
+          <p>Selecting a destination and adding a goal to complete at that 
+            destination will populate in your Goal page.</p>
         </div>
       </div>
     </div>
@@ -48,15 +46,14 @@
         <i class="fa fa-trophy fa-5x"></i>
         <div class="caption">
           <h3>Achieve</h3>
-          <p>Once you have completed a goal, it will populate into your achievements page where you can view all of your accomplishments</p>
+          <p>Once you have completed a goal, it will populate into your 
+            achievements page where you can view all of your accomplishments</p>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 <br>
-
 <div id="about_us">
 <h2 id="aboutUsLabel">About us</h2>
   <div class="row">
@@ -68,53 +65,64 @@
           <h4>API Master</h4>
           <p></p>
           <p>
-            <a href="https://www.linkedin.com/in/kathylovan"><i class="fa fa-linkedin-square fa-2x"></i></a>
-            <a href="https://github.com/katiosity"><i class="fa fa-github fa-2x"></i></a></p>
+            <a href="https://www.linkedin.com/in/kathylovan">
+              <i class="fa fa-linkedin-square fa-2x"></i></a>
+            <a href="https://github.com/katiosity">
+              <i class="fa fa-github fa-2x"></i></a></p>
         </div>
       </div>
     </div>
-
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
         <%= image_tag("katlyn.jpg", class: "about_pics", alt: "A lovely picture of Kathy") %>
         <div class="caption">
           <h3>Katlyn</h3>
           <h4>Project Manager</h4>
-          <p>Katlyn served as Project manager and Trello master. As with the rest of the team she took on a full stack role.  She contributed to the main page, achievements page, as well as restricting access when a user is not logged in.  In her spare time, Katlyn ejoys hiking, baking, and exploring.</p>
-          <p><a href="https://www.linkedin.com/in/katlyn-buffum-9891b8b1"><i class="fa fa-linkedin-square fa-2x"></i></a>
-          <a href="https://github.com/k-buffum"><i class="fa fa-github fa-2x"></i></a></p>
+          <p>Katlyn served as Project manager and Trello master. As with the rest of the team 
+            she took on a full stack role.  She contributed to the main page, achievements page, 
+            as well as restricting access when a user is not logged in.  In her spare time, Katlyn 
+            enjoys hiking, baking, and exploring.</p>
+          <p><a href="https://www.linkedin.com/in/katlyn-buffum-9891b8b1">
+            <i class="fa fa-linkedin-square fa-2x"></i></a>
+          <a href="https://github.com/k-buffum">
+            <i class="fa fa-github fa-2x"></i></a></p>
         </div>
       </div>
     </div>
-
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
         <%= image_tag("neth.jpg", class: "about_pics", alt: "...") %>
         <div class="caption">
           <h3>Neth</h3>
           <h4>Database Manager</h4>
-          <p>Neth’s ancestors dabbled in magic that they were unable to control that only now might spell certain doom for humanity. Neth spends his time at his family’s estate to see that the Eldritch horrors that lie beneath stay hidden from common eyes by sending foolhardy adventurers to almost certain doom as they do battle against the darkness.</p>
+          <p>Neth’s ancestors dabbled in magic that they were unable to control that only now 
+            might spell certain doom for humanity. Neth spends his time at his family’s estate 
+            to see that the Eldritch horrors that lie beneath stay hidden from common eyes by 
+            sending foolhardy adventurers to almost certain doom as they do battle against the 
+            darkness.</p>
         </div>
       </div>
     </div>
-
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
         <%= image_tag("scott.jpg", class: "about_pics", alt: "A lovely picture of Scott") %>
         <div class="caption">
           <h3>Scott</h3>
           <h4>Git Master</h4>
-          <p>Scott served as the Git Master on Rainy Day and took a full stack roll, working with both the front end and back end. He contributed to various aspects including styling, routes, database construction and authentication. In his spare time he enjoys playing board games and teaching his baby girl her first (Scottish) words.</p>
-          <p><a href="https://www.linkedin.com/in/scott-heron-8287ab18"><i class="fa fa-linkedin-square fa-2x"></i></a>
-          <a href="https://github.com/scottheron"><i class="fa fa-github fa-2x"></i></a></p>
+          <p>Scott served as the Git Master on Rainy Day and took a full stack roll, working with 
+            both the front end and back end. He contributed to various aspects including styling, 
+            routes, database construction and authentication. In his spare time he enjoys playing 
+            board games and teaching his baby girl her first (Scottish) words.</p>
+          <p><a href="https://www.linkedin.com/in/scott-heron-8287ab18">
+            <i class="fa fa-linkedin-square fa-2x"></i></a>
+          <a href="https://github.com/scottheron">
+            <i class="fa fa-github fa-2x"></i></a></p>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 </div>
-
 <div class="modal fade" id="login">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -125,17 +133,15 @@
       <div class="modal-body">
         <h1>Login</h1>
         <%= bootstrap_form_for :user, url: '/login' do |user| %>
-        <%= user.email_field :email %>
-        <%= user.password_field :password %>
-        <%= user.primary 'login' %>
-        <a class="btn btn-primary" href="/reset" role="button">Forgot Password?</a>
+          <%= user.email_field :email %>
+          <%= user.password_field :password %>
+          <%= user.primary 'login' %>
+          <a class="btn btn-primary" href="/reset" role="button">Forgot Password?</a>
         <% end %>
       </div>
     </div>
   </div>
 </div>
-
-
 <div class="modal fade" id="signup">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -145,7 +151,6 @@
       </div>
       <div class="modal-body">
         <h1>Sign Up</h1>
-
         <%= bootstrap_form_for :user, url: '/signup' do |user| %>
           <%= user.text_field :name %>
           <%= user.email_field :email %>
@@ -153,11 +158,9 @@
           <%= user.password_field :password_confirmation %>
           <%= bootstrap_form_for :zip do |zip| %>
             <%= zip.text_field :code %>
-          
-          <%= user.primary 'Signup' %>
+            <%= user.primary 'Signup' %>
           <% end %>
         <% end %>
-
       </div>
     </div>
   </div>

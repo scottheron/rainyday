@@ -1,3 +1,47 @@
 // Place all the styles related to the achievements controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#achievement-body {
+  min-height: 856px;
+  padding-top: 15px;
+  background-image: asset-url('happy-man-red-umbrella.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+#achievement-header {
+  border: 3px solid black;
+  background-color: rgba(144, 195, 212, 0.8);
+  padding: 5px;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+#goal-body {
+  min-height: 838px;
+  padding-top: 15px;
+  background-image: asset-url('raining-window.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+#goal-header {
+  border: 3px solid black;
+  background-color: rgba(144, 195, 212, 0.8);
+  padding: 5px;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+.delete-button {
+  color: #E0142C;
+}

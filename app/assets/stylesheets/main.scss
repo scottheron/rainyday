@@ -19,7 +19,9 @@
 }
 
 body {
-  background-color: #89bdd3;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .col-xs-4 {
@@ -67,10 +69,8 @@ footer a {
   background-color: #CECECE;
 }
 
-.jumbotron {
-
 #section-1 {
-  background-image: url('girl-park-umbrella1280.jpg');
+  background-image: url('/assets/girl-park-umbrella1280.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -78,6 +78,9 @@ footer a {
   min-height: 100%;
   min-width: 100%;
   left: 0;
+  text-align: center;
+  color: white;
+  padding: 2%;
 }
 
 #title {

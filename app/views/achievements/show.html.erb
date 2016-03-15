@@ -1,6 +1,6 @@
 <h1 id='achievementH1'>My Achievements</h1>
 
-<% if @achievements.length == 0 %>
+<% if @user_achievements.length == 0 %>
   <div id='noAchievement'>
     <h3>You dont have any achievements yet.</h3>
     <h4>Once you complete a <%= link_to ' Goal ', '/goal' %>it will show up as an achievement here. To get started with a new Goal, <%= link_to ' search ', '/search' %> for a new place and add a goal to track your Rainy Day's on the <%= link_to 'Goals ', '/goal' %> page.</h4>

@@ -9,10 +9,12 @@
 
 <% @goals.each do |goal| %>
   <% if goal.user_id === @current_user.id && goal.completed === false %>
-    <h3><%= goal.place.name %></h3>
-    <h4><%= goal.description %></h4>
-    <%= link_to 'destroy', goal, :method => :delete %>
-    <%= link_to 'update', goal, :method => :put %>
+    <div class="well">
+      <h3><%= goal.place.name %></h3>
+      <h4><%= goal.description %></h4>
+      <%= link_to 'destroy', goal, :method => :delete %>
+      <%= link_to 'update', goal, :method => :put %>
+    </div>
   <% end %>
 <% end %>
 

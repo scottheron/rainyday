@@ -5,22 +5,56 @@
 
 
 <div class="row">
-  <div class="col-xs-4"> </div>
+  
   <% if !@current_user %>
-    <div class="col-xs-1 login_btn">
-      <%= link_to 'Login', '#login', class:'btn btn-primary', data: {:toggle => 'modal'} %>
+    <div class="col-xs-4">
     </div>
-    <div class="col-xs-1 about_us_btn">
-      <%= link_to 'About Us', '#about_us', class:'btn btn-primary' %>
+    <div class="col-xs-4">
+      <%= link_to 'Login', '#login', class:'btn btn-primary main_btns', data: {:toggle => 'modal'} %>
+      <%= link_to 'About Us', '#about_us', class:'btn btn-primary main_btns' %>
+      <%= link_to 'Sign Up', '#signup', class:'btn btn-primary main_btns', data: {:toggle => 'modal'} %>
     </div>
-    <div class="col-xs-1 sign_up_btn">
-      <%= link_to 'Sign Up', '#signup', class:'btn btn-primary', data: {:toggle => 'modal'} %>
+    <div class="col-xs-4">
     </div>
   <% end %>
-  <div class="col-xs-4"> </div>
+  
 </div>
 
 <br>
+<br>
+
+<div id='use_cases'>
+  <div class="row">
+    <div class="col-sm-6 col-md-4 use_case">
+      <div class="thumbnail">
+        <i class="fa fa-plane fa-5x"></i>
+        <div class="caption">
+          <h3>Search</h3>
+          <p>Always wanted to explore your town, but feel like your too busy? Save those trips for a rainy day.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4 use_case">
+      <div class="thumbnail">
+        <i class="fa fa-list fa-5x"></i>
+        <div class="caption">
+          <h3>Create a list</h3>
+          <p>Selecting a destination and adding a goal to complete at that destination will populate in your Goal page.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4 use_case">
+      <div class="thumbnail">
+        <i class="fa fa-trophy fa-5x"></i>
+        <div class="caption">
+          <h3>Achieve</h3>
+          <p>Once you have completed a goal, it will populate into your achievements page where you can view all of your accomplishments</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <br>
 
 <div id="about_us">

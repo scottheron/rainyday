@@ -17,7 +17,11 @@
   text-align: center;
 }
 
-.col-xs-1 {
+body {
+  background-color: #3fb0ac;
+}
+
+.col-xs-4 {
   text-align: center;
 }
 
@@ -33,9 +37,13 @@
 
 footer {
   border-top: 1px solid black;
+  bottom: 0;
   font-weight: bold;
+  left: 0;
   max-height: 100px;
+  position: fixed;
   text-align: center;
+  width: 100%;
 }
 
 footer a {
@@ -43,6 +51,7 @@ footer a {
 }
 
 #goalH1 {
+  color: #173e43;
   text-align: center;
 }
 
@@ -51,16 +60,42 @@ footer a {
   margin-top: 0px;
 }
 
+.main_btns {
+  margin-left: 5%;
+}
+
 .navbar {
   margin-bottom: 0;
 }
 
+.navbar-default, footer{
+  background-color: #dddfd4;
+}
+
 #noGoal {
-  margin-left: 20%;
-  margin-right: 20%;
+  background-color: #fae596;
+  border: 10px solid #173e43;
+  margin: 2% 35%;
+  max-width: 600px;
+  min-width: 200px;
+  padding: 2% 5%;
   text-align: center;
+}
+
+#noGoal h3, #noGoal h4 {
+  color: #173e43;
 }
 
 .thumbnail {
   border: none;
+}
+
+#use_cases {
+  text-align: center;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+.use_case {
+  max-width: 250px;
 }

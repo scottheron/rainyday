@@ -1,7 +1,5 @@
-
+# Session controller creates and destroys the current user session
 class SessionController < ApplicationController
-	def new
-	end
 	def create
 		user = User.authenticate(user_params[:email], user_params[:password])
 		if user

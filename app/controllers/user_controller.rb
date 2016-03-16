@@ -1,13 +1,13 @@
+# user controller creates new users, updates their details and adds zips 
+# to the zip table for each user
 class UserController < ApplicationController
  before_action :is_authenticated?, except: [:new, :create]
   def new
     user = User.new
     zip = Zip.new
   end
-
   def show
   end
-
   def create
     if user_params == nil
       flash[:danger] = "Passwords don't match"
@@ -21,10 +21,8 @@ class UserController < ApplicationController
         z.lat = lat
         z.lng = lon
       end
-
       user.zip_id = new_zip.id
       user.save
-
       if user.valid?
         session[:user_id] = user.id
         flash[:success] = 'User created and logged in'
@@ -36,11 +34,9 @@ class UserController < ApplicationController
       end
     end
   end
-
   def edit
     @current_zip = Zip.find(@current_user.zip_id)
   end
-
   def update
     current_id = @current_user.id
     user = User.find(current_id)
@@ -62,14 +58,11 @@ class UserController < ApplicationController
       redirect_to root_path
     end
   end  
-
   private
-
   def zip_params
     user_code = params[:zip][:code]
     params.require(:zip).permit(:code)
   end
-
   def user_params
     password = params[:user][:password]
     password_confirmation = params[:user][:password_confirmation]
@@ -79,5 +72,4 @@ class UserController < ApplicationController
       nil
     end
   end 
-
 end

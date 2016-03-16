@@ -1,9 +1,9 @@
+<!-- User sign up form -->
 <%= bootstrap_form_for :user do |user| %>
   <%= user.text_field :name %>
   <%= user.text_field :zipcode %>
   <%= user.email_field :email %>
   <%= user.password_field :password %>
   <%= user.password_field :password_confirmation %>
-
   <%= user.primary 'Signup' %>
 <% end %>

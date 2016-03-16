@@ -5,7 +5,6 @@ class PlaceController < ApplicationController
 	require 'rest-client'
 	def new
 		@place = Place.new
-
 	end
 	def create
 		puts place_params
@@ -25,10 +24,10 @@ class PlaceController < ApplicationController
 				z.lat = zipcode.to_lat
 				z.lng = zipcode.to_lon
 			end
-
 			lat = this_zip.lat.to_s
 			lng = this_zip.lng.to_s
-			results = RestClient.get 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+lat+','+lng+'&radius=10000&keyword='+@search_term+'&key='+ENV['GOOGLE_PLACES_KEY']
+			results = RestClient.get 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='
+			  +lat+','+lng+'&radius=10000&keyword='+@search_term+'&key='+ENV['GOOGLE_PLACES_KEY']
 			@results = JSON.parse(results)
 			@zip_code = zipcode
 			puts results
@@ -36,9 +35,9 @@ class PlaceController < ApplicationController
 	end
 	def show
 		#take param
-
 		place_id = params[:place].to_s
-		details = RestClient.get 'https://maps.googleapis.com/maps/api/place/details/json?placeid='+place_id+'&key='+ENV['GOOGLE_PLACES_KEY']
+		details = RestClient.get 'https://maps.googleapis.com/maps/api/place/details/json?placeid='
+		  +place_id+'&key='+ENV['GOOGLE_PLACES_KEY']
 		@details = JSON.parse(details)
 	end
 	def search_params
@@ -47,9 +46,7 @@ class PlaceController < ApplicationController
 	def place_params
 		params.require(:place).permit(:name, :url, :address, :phone, :place_id)
 	end
-
 	def zip_params
 		params.permit(:code)
 	end
-
 end

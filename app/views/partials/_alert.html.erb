@@ -1,3 +1,4 @@
+<!-- Flash alert partial responsible for dislaying all flash alerts -->
 <% flash.each do |type, msg| %>
     <div class="alert alert-<%= type %>"><%= msg %></div>
 <% end %>

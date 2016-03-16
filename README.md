@@ -22,6 +22,7 @@ This is a web app that lets a user build a list of places they want to visit whe
 * [Google Web Fonts - Questrial|Comfortaa:400](http://google.com/fonts)
 * [BootStrap](https://netdna.bootstrapcdn.com)
 * [Google Places](https://developers.google.com/places/)
+* [Font Awesome Icons](https://fortawesome.github.io/Font-Awesome/icons/)
 
 ### Known Issues
 * none

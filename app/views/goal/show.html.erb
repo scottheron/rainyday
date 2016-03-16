@@ -3,6 +3,14 @@
     <h1 id='goalH1'>My Rainy Day List</h1>
     <h3>Tasks saved for a rainy day.</h3>
   </div>
+
+  <% if @user_goals.length == 0 %>
+    <div id='noGoal'>
+      <h3>You dont have any goals yet.</h3>
+      <h4><%= link_to 'Search ', '/search' %> for a new place and add a goal to add to your Rainy Day list.</h4>
+    </div>
+  <% end %>
+
   <% @goals.each do |goal| %>
     <% if goal.user_id === @current_user.id && goal.completed === false %>
       <div class="container goals">

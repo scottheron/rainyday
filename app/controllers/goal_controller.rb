@@ -3,6 +3,7 @@ class GoalController < ApplicationController
   before_action :is_authenticated?
   def show
     @goals = Goal.where(completed: false)
+    @user_goals = Goal.where(user_id: @current_user.id, completed: false)
   end
   def new
     @place = Place.find(params[:id])

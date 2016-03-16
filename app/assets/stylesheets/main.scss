@@ -4,11 +4,19 @@
 
 #about_us {
   text-align: center;
-  background-color: #6ed3cf;
+  background-color: #173e43;
   background-size: cover;
   width: 100% auto;
   color: #173e43;
   padding: 1% 5% 10% 3%;
+}
+
+.about_us_text {
+  color: white;
+}
+
+.about_us_thumbnail {
+  background-color: #173e43;
 }
 
 .about_pics {

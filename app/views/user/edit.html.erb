@@ -1,13 +1,16 @@
-<h1>Edit Profile</h1>
+<div id="user-edit-body">
+  <div id="user-edit-form">
+    <h1 class='place-opacity3'>Edit Profile</h1>
 
-<%= bootstrap_form_for :user do |f| %>
-	<%= f.text_field :name, value: @current_user['name'] %>
-	<%= f.text_field :email, value: @current_user['email'] %>
-	<%= f.password_field :password %>
-	<%= f.password_field :password_confirmation %>
-  <%= bootstrap_form_for :zip do |z| %>
-    <%= z.text_field :code, value: @current_zip['code'] %>
-	<%= f.submit 'Save' %>
-  <% end %>
-<% end %>
-
+    <%= bootstrap_form_for :user do |f| %>
+    	<%= f.text_field :name, value: @current_user['name'] %>
+    	<%= f.text_field :email, value: @current_user['email'] %>
+    	<%= f.password_field :password %>
+    	<%= f.password_field :password_confirmation %>
+      <%= bootstrap_form_for :zip do |z| %>
+        <%= z.text_field :code, value: @current_zip['code'] %>
+    	<%= f.submit 'Save', class: 'user-form-button' %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

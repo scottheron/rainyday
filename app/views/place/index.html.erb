@@ -1,8 +1,13 @@
-<%= form_tag("/results", method: "get") do %>
-  <%= label_tag(:code, "Search this zip code") %>
-  <%= text_field_tag(:code, @current_user.zip.code) %>
-
-  <%= label_tag(:q, "Search for things to do:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
+<div id='place-body'>
+  <div id='place-form-container'>
+    <%= form_tag("/results", method: "get") do %>
+      <%= label_tag(:code, "Search this zip code", class: 'place-form-text') %>
+      <%= text_field_tag(:code, @current_user.zip.code) %>
+      <br />
+      <%= label_tag(:q, "Search for things to do:", class: 'place-form-text') %>
+      <%= text_field_tag(:q) %>
+      <br />
+      <%= submit_tag("Search", class: 'place-form-button') %>
+    <% end %>
+  </div>
+</div>

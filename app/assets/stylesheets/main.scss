@@ -2,14 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.achievements, .goals {
-  background-color: #9ad3de;
-  border: 3px solid #e3e3e3;
-  margin-top: 10px;
-  max-width: 40%;
-  text-align: center;
-}
-
 #achievementH1, #goalH1 {
   text-align: center;
 }
@@ -190,20 +182,6 @@ footer a {
   text-align: center;
 }
 
-#section-1 {
-  background-image: asset-url('girl-park-umbrella1280.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  min-height: 100%;
-  min-width: 100%;
-  left: 0;
-  text-align: center;
-  color: white;
-  padding: 2%;
-}
-
 #subtitle {
   font-family: 'Dancing Script', cursive;
   font-size: 45px;
@@ -228,7 +206,7 @@ footer a {
 #title {
   font-family: 'Comfortaa', cursive;
   font-size: 90px;
-  color: #3fb0ac;
+  color: #6ed3cf;
   font-weight: bold;
 }
 

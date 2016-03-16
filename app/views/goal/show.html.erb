@@ -3,18 +3,6 @@
     <h1 id='goalH1'>My Rainy Day List</h1>
     <h3>Tasks saved for a rainy day.</h3>
   </div>
-<% @goals.each do |goal| %>
-  <% if goal.user_id === @current_user.id && goal.completed === false %>
-    <div class="container goals">
-      <h3><a href=<%= goal.place.url %>><%= goal.place.name %></a></h3>
-      <h4><%= goal.description %></h4>
-      <h5>
-        <%= link_to 'UNLOCK ACHIEVEMENT', goal, :method => :put %>
-        <%= image_tag("trophy2.png", height: '100px', alt: "trophy") %>
-        <%= link_to 'DELETE ACHIEVEMENT', goal, :method => :delete %>
-      </h5>
-    </div>
-  <% end %>
   <% @goals.each do |goal| %>
     <% if goal.user_id === @current_user.id && goal.completed === false %>
       <div class="container goals">

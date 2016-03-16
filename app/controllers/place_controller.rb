@@ -26,8 +26,7 @@ class PlaceController < ApplicationController
 			end
 			lat = this_zip.lat.to_s
 			lng = this_zip.lng.to_s
-			results = RestClient.get 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='
-			  +lat+','+lng+'&radius=10000&keyword='+@search_term+'&key='+ENV['GOOGLE_PLACES_KEY']
+			results = RestClient.get 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+lat+','+lng+'&radius=10000&keyword='+@search_term+'&key='+ENV['GOOGLE_PLACES_KEY']
 			@results = JSON.parse(results)
 			@zip_code = zipcode
 			puts results

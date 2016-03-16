@@ -31,7 +31,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav navbar-right">
-              <%= link_to ' Places', '/search', class: 'btn btn-primary glyphicon glyphicon-search pull-right' %>
+              <li><a href="/search" id="nav-link">Search page</a></li>
               <li><a href="/goal" id="nav-link">Goals</a></li>
               <li><a href="/achievements" id="nav-link">Achievements</a></li>
               <li><a href="/profile" id="nav-link">My Profile</a></li>
@@ -43,26 +43,14 @@
     <% end %>
     <%= render 'partials/alert' %>
 
-
     <%= yield %>
-    <br/>
     </div>
-  
       <div id='footer'>
         <footer>
           <span id="copyright">
             <i class="fa fa-copyright"></i> Rainy Day 2016. All rights reserved.
           </span>
-
-          <!-- <span id="contributors">
-            Contributors: 
-            <a href="https://github.com/katiosity">Kathy</a>, 
-            <a href="https://github.com/k-buffum">Katlyn</a>, 
-            Neth, 
-            <a href="https://github.com/scottheron">Scott</a>
-          </span> -->
         </footer>
       </div>
-
   </body>
 </html>

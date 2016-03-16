@@ -5,17 +5,28 @@
     <br />
     <br />
     <br />
+      <div class="row" id="btns-public">
+        <% if !@current_user %>
+          <div class="col-xs-4">
+          </div>
+          <div class="col-xs-4">
+            <%= link_to 'Login', '#login', class:'btn btn-primary main_btns', data: {:toggle => 'modal'} %>
+            <%= link_to 'Sign Up', '#signup', class:'btn btn-primary main_btns', data: {:toggle => 'modal'} %>
+          </div>
+          <div class="col-xs-4">
+          </div>
+        <% end %>
+      </div>
     <a href="#use_cases" type="button" class="btn btn-primary btn-lg" id="subtitle-2">How it works</a>
   </div>
-
   <div id='use_cases' class="section-2">
     <div class="row">
       <div class="col-sm-6 col-md-4 use_case">
         <div class="thumbnail">
-          <i class="fa fa-plane fa-5x"></i>
+          <i class="fa fa-search fa-5x"></i>
           <div class="caption">
-            <h3>Search</h3>
-            <p>Always wanted to explore your town, but feel like your too busy? Save those trips for a rainy day.</p>
+            <h3>Search for activities</h3>
+            <p>How many times have you said to yourself that you'd save something for a rainy day? And when that rainy day comes, you find yourself feeling let down or disappointed? Now, it's time to save a list of fun things to do instead, and transform your whole perspective on rainy days!</p>
           </div>
         </div>
       </div>
@@ -24,7 +35,7 @@
           <i class="fa fa-list fa-5x"></i>
           <div class="caption">
             <h3>Create a list</h3>
-            <p>Selecting a destination and adding a goal to complete at that destination will populate in your Goal page.</p>
+            <p>Keep a running a list of all the things you'd rather do on rainy days, and monitor your progress using our Goals tracker.</p>
           </div>
         </div>
       </div>
@@ -33,30 +44,15 @@
           <i class="fa fa-trophy fa-5x"></i>
           <div class="caption">
             <h3>Achieve</h3>
-            <p>Once you have completed a goal, it will populate into your achievements page where you can view all of your accomplishments</p>
+            <p>Work towards completing your rainy days goals to unlock achievements using our simple dashboard.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-    <div class="row" id="btns-public">
-      <% if !@current_user %>
-        <div class="col-xs-4">
-        </div>
-        <div class="col-xs-4">
-          <%= link_to 'Login', '#login', class:'btn btn-primary main_btns', data: {:toggle => 'modal'} %>
-          <%= link_to 'About Us', '#about_us', class:'btn btn-primary main_btns' %>
-          <%= link_to 'Sign Up', '#signup', class:'btn btn-primary main_btns', data: {:toggle => 'modal'} %>
-        </div>
-        <div class="col-xs-4">
-        </div>
-      <% end %>
-    </div>
-
-<div id="about_us">
-  <h2 id="aboutUsLabel">About the developers</h2>
-  <br />
+  <div id="about_us">
+    <h2 id="aboutUsLabel">About the Developers</h2>
+    <br />
     <div class="row">
       <div class="col-sm-6 col-md-3">
         <div class="thumbnail">
@@ -65,7 +61,7 @@
               <h3>Kathy</h3>
                 <h4>API Master</h4>
                   <p>
-                    Need description here.
+                    Kathy served as an API master and full stack developer for Rainy Day. Her main contributions include incorporating the Google Places API search functionality and styling Rainy Day's homepage.
                   </p>
                   <p>
                     <a href="https://www.linkedin.com/in/kathylovan">
@@ -78,7 +74,6 @@
             </div>
         </div>
       </div>
-
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
         <%= image_tag("katlyn.jpg", class: "about_pics", alt: "A lovely picture of Kathy") %>
@@ -91,7 +86,6 @@
         </div>
       </div>
     </div>
-
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
         <%= image_tag("riddler.png", class: "about_pics", alt: "...") %>
@@ -102,7 +96,6 @@
         </div>
       </div>
     </div>
-
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
         <%= image_tag("scott.jpg", class: "about_pics", alt: "A lovely picture of Scott") %>
@@ -147,18 +140,18 @@
         </div>
         <div class="modal-body">
           <h1>Sign Up</h1>
-          <%= bootstrap_form_for :user, url: '/signup' do |user| %>
-            <%= user.text_field :name %>
-            <%= user.email_field :email %>
-            <%= user.password_field :password %>
-            <%= user.password_field :password_confirmation %>
-            <%= bootstrap_form_for :zip do |zip| %>
-            <%= zip.text_field :code %>
-            <%= user.primary 'Signup' %>
+            <%= bootstrap_form_for :user, url: '/signup' do |user| %>
+              <%= user.text_field :name %>
+              <%= user.email_field :email %>
+              <%= user.password_field :password %>
+              <%= user.password_field :password_confirmation %>
+              <%= bootstrap_form_for :zip do |zip| %>
+              <%= zip.text_field :code %>
+              <%= user.primary 'Signup' %>
+                <% end %>
             <% end %>
-          <% end %>
-        </div>
+          </div>
+      </div>
     </div>
   </div>
-</div>
 </div>

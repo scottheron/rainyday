@@ -1,13 +1,11 @@
-
+<!-- Displays details of a single search result -->
 <div id='place-show-body'>
-
 	<div class="container">
 		<h1 class='place-header'><%= @details["result"]["name"] %></h1>
 		<div class="well place-opacity2">
 			<h3><a href="<%= @details['result']['website'] %>" target="_blank">Visit website</a></h3>
 			<h4><%= @details["result"]["formatted_address"] %></h4>
 			<h4><%= @details["result"]["formatted_phone_number"] %></h4>
-
 			<%= bootstrap_form_for :place do |place| %>
 				<%= place.hidden_field :name, value: @details['result']['name'] %>
 				<%= place.hidden_field :url, value: @details['result']['website'] %>

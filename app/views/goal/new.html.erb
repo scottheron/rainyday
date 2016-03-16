@@ -1,13 +1,10 @@
-
+<!-- Input field for users achievment -->
 <div id="goal-new-body">
   <div class="place-opacity3">
     <h1>Add an acheivement!</h1>
-
     <h2><a href="<%= @place.url %>"> <%= @place.name %> </a></h2>
-
     <h3><%= @place.address %></h3>
     <h3><%= @place.phone %></h3>
-
     <div>
       <%= bootstrap_form_for :goal do |goal| %>
         <%= goal.text_area :description %>
@@ -18,5 +15,4 @@
       <% end %>
     </div>
   </div>
-
 </div>

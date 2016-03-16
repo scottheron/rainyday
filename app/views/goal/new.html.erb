@@ -1,14 +1,22 @@
-<!-- Field to take a users description for their achievement -->
-<h1>Add an acheivement!</h1>
-<h2><a href="<%= @place.url %>"> <%= @place.name %> </a></h2>
-<h3><%= @place.address %></h3>
-<h3><%= @place.phone %></h3>
-<div>
-  <%= bootstrap_form_for :goal do |goal| %>
-    <%= goal.text_area :description %>
-    <%= goal.hidden_field :completed, value: false %>
-    <%= goal.hidden_field :place_id, value: @place.id %>
-    <%= goal.hidden_field :user_id, value: @user.id %>
-    <%= submit_tag("Set my acheivement!") %>
-  <% end %>
+
+<div id="goal-new-body">
+  <div class="place-opacity3">
+    <h1>Add an acheivement!</h1>
+
+    <h2><a href="<%= @place.url %>"> <%= @place.name %> </a></h2>
+
+    <h3><%= @place.address %></h3>
+    <h3><%= @place.phone %></h3>
+
+    <div>
+      <%= bootstrap_form_for :goal do |goal| %>
+        <%= goal.text_area :description %>
+        <%= goal.hidden_field :completed, value: false %>
+        <%= goal.hidden_field :place_id, value: @place.id %>
+        <%= goal.hidden_field :user_id, value: @user.id %>
+        <%= submit_tag("Set my acheivement!", class: 'place-form-button') %>
+      <% end %>
+    </div>
+  </div>
+
 </div>

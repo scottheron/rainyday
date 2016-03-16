@@ -1,11 +1,14 @@
-<!-- Show user information on the profile page -->
-<h1>My profile</h1>
-<% if @current_user %>
-  <h2><%= @current_user.name %></h2>
-  <h3><%= @current_user.email %></h3>
-  <h3><%= @current_user.zip.code %></h3>
-  <%= link_to 'Edit', 'profile/edit' %>
-<% else %>
-  <% redirect_to action: :index %>
-<% end %>
 
+<div id="user-profile-body">
+  <div class="user-opacity">
+    <h1>My profile</h1>
+    <% if @current_user %>
+      <h2><%= @current_user.name %></h2>
+      <h3><%= @current_user.email %></h3>
+      <h3><%= @current_user.zip.code %></h3>
+      <div id="edit-form-button"><%= link_to 'Edit', 'profile/edit', class: 'user-form-button' %></div>
+    <% else %>
+      <% redirect_to action: :index %>
+    <% end %>
+  </div>
+</div>

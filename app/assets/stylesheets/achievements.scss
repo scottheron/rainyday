@@ -2,9 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// views/achievements/show.html.erb
+
 #achievement-body {
   min-height: 856px;
   padding-top: 15px;
+  padding-bottom: 30px;
   background-image: asset-url('happy-man-red-umbrella.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -22,9 +25,12 @@
   text-align: center;
 }
 
+// views/goal/show.html.erb
+
 #goal-body {
   min-height: 838px;
   padding-top: 15px;
+  padding-bottom: 30px;
   background-image: asset-url('raining-window.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -45,3 +51,108 @@
 .delete-button {
   color: #E0142C;
 }
+
+// views/place/index.html.erb
+
+#place-body {
+  min-height: 838px;
+  padding-top: 15px;
+  background-image: asset-url('rain-drop.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+#place-form-container {
+  background-color: rgba(144, 195, 212, 0.9);
+  padding: 35px;
+  width: 60%;
+  margin: 45px auto;
+  border-radius: 25px;
+}
+
+.place-form-text {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weigth: bold;
+}
+
+.place-form-button {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  background-color: #173e43;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+// views/place/search.html.erb
+
+#place-results-body {
+  min-height: 838px;
+  padding-top: 15px;
+  background-image: asset-url('puddle.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+}
+
+.place-header {
+  font-size: 50px;
+  background-color: rgba(125, 146, 153, 0.9);
+  padding: 5px;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.place-opacity {
+  background-color: rgba(125, 146, 153, 0.9);
+}
+
+// views/place/show.html.erb
+
+#place-show-body {
+  min-height: 838px;
+  padding-top: 15px;
+  background-image: asset-url('leaves.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+}
+
+.place-opacity2 {
+  background-color: rgba(242, 162, 181, 0.8);
+}
+
+// views/goal/new.html.erb
+
+#goal-new-body {
+  height: 700px;
+  padding-top: 15px;
+  background-image: asset-url('rain-window2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+}
+
+.place-opacity3 {
+  background-color: rgba(125, 146, 153, 0.9);
+  width: 75%;
+  padding: 20px;
+  margin: 15px auto;
+}
+

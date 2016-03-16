@@ -35,8 +35,7 @@ class PlaceController < ApplicationController
 	def show
 		#take param
 		place_id = params[:place].to_s
-		details = RestClient.get 'https://maps.googleapis.com/maps/api/place/details/json?placeid='
-		  +place_id+'&key='+ENV['GOOGLE_PLACES_KEY']
+		details = RestClient.get 'https://maps.googleapis.com/maps/api/place/details/json?placeid='+place_id+'&key='+ENV['GOOGLE_PLACES_KEY']
 		@details = JSON.parse(details)
 	end
 	def search_params

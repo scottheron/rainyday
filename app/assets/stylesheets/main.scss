@@ -202,3 +202,25 @@ footer {
 .container-fluid {
   padding: 0;
 }
+
+// views/passwords/edit.html.erb
+
+#forgot-password-body{
+  min-height: 838px;
+  padding-top: 15px;
+  background-image: asset-url('rain-skyline.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+}
+
+#forgot-password-form{
+  border: 2px solid black;
+  width: 80%;
+  margin: 5px auto;
+  padding: 5px;
+  background-color: rgba(144, 195, 212, 0.8);
+}

@@ -1,29 +1,14 @@
-<div class="container">
-    <div id="section-1">
-      <h1 id="title">Rainy Day</h1>
-      <h3 id="subtitle">Because when it pours, you'll need something fun to do</h3>
-      <br />
-      <br />
-      <br />
-      <a href="#use_cases" type="button" class="btn btn-primary btn-lg" id="subtitle-2">How it works</a>
-  </div>
-
-  <div class="row" id="btns-public">
-    <% if !@current_user %>
-      <div class="col-xs-4">
-      </div>
-      <div class="col-xs-4">
-        <%= link_to 'Login', '#login', class:'btn btn-primary main_btns', data: {:toggle => 'modal'} %>
-        <%= link_to 'About Us', '#about_us', class:'btn btn-primary main_btns' %>
-        <%= link_to 'Sign Up', '#signup', class:'btn btn-primary main_btns', data: {:toggle => 'modal'} %>
-      </div>
-      <div class="col-xs-4">
-      </div>
-    <% end %>
-  </div>
-
 <div class="container-fluid">
-  <div id='use_cases'>
+  <div id="section-1">
+    <h1 id="title">Rainy Day</h1>
+    <h3 id="subtitle">Because when it pours, you'll need something fun to do</h3>
+    <br />
+    <br />
+    <br />
+    <a href="#use_cases" type="button" class="btn btn-primary btn-lg" id="subtitle-2">How it works</a>
+  </div>
+
+  <div id='use_cases' class="section-2">
     <div class="row">
       <div class="col-sm-6 col-md-4 use_case">
         <div class="thumbnail">
@@ -54,25 +39,45 @@
       </div>
     </div>
   </div>
-</div>
 
+    <div class="row" id="btns-public">
+      <% if !@current_user %>
+        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-4">
+          <%= link_to 'Login', '#login', class:'btn btn-primary main_btns', data: {:toggle => 'modal'} %>
+          <%= link_to 'About Us', '#about_us', class:'btn btn-primary main_btns' %>
+          <%= link_to 'Sign Up', '#signup', class:'btn btn-primary main_btns', data: {:toggle => 'modal'} %>
+        </div>
+        <div class="col-xs-4">
+        </div>
+      <% end %>
+    </div>
 
 <div id="about_us">
-<h2 id="aboutUsLabel">About us</h2>
-  <div class="row">
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <%= image_tag("kathy.jpg", class: "about_pics", alt: "A lovely picture of Kathy") %>
-        <div class="caption">
-          <h3>Kathy</h3>
-          <h4>API Master</h4>
-          <p></p>
-          <p>
-            <a href="https://www.linkedin.com/in/kathylovan"><i class="fa fa-linkedin-square fa-2x"></i></a>
-            <a href="https://github.com/katiosity"><i class="fa fa-github fa-2x"></i></a></p>
+  <h2 id="aboutUsLabel">About the developers</h2>
+  <br />
+    <div class="row">
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+          <%= image_tag("kathy.jpg", class: "about_pics", alt: "A lovely picture of Kathy") %>
+            <div class="caption">
+              <h3>Kathy</h3>
+                <h4>API Master</h4>
+                  <p>
+                    Need description here.
+                  </p>
+                  <p>
+                    <a href="https://www.linkedin.com/in/kathylovan">
+                      <i class="fa fa-linkedin-square fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/katiosity">
+                      <i class="fa fa-github fa-2x"></i>
+                    </a>
+                  </p>
+            </div>
         </div>
       </div>
-    </div>
 
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">

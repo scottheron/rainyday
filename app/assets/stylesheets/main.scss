@@ -70,7 +70,7 @@ footer {
   width: 100px;
   font-size: 16px;
   text-align: center;
-  background-color: red;
+  background-color: #ff4d4d;
   color: white;
   border: 0;
   margin-right: 5%;
@@ -124,6 +124,10 @@ footer {
 
 .thumbnail {
   border: none;
+}
+
+.thumbnailAbout {
+  background-color: #6ed3cf;
 }
 
 #title {

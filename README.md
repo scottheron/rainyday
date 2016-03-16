@@ -11,7 +11,7 @@ This is a web app that lets a user build a list of places they want to visit whe
 
 ### Features
 * A users can create a profile and search for places to visit.
-* They can set their zip during sign up and on their profile which will be the default seach location, however they can also change the zip for a one time search in a new location.
+* They can set their zip during sign up and on their profile which will be the default search location, however they can also change the zip for a one time search in a new location.
 * The user can create a list to keep track of places and goals to visit and accomplish.
 * The user can unlock Achievments which reflect their completed goals.
 * If the user forgets their password they can request a change password reset email be sent to their address with a link to reset their password. 
@@ -28,4 +28,4 @@ This is a web app that lets a user build a list of places they want to visit whe
 * none
 
 ### Disclaimer
-Rainy Day is an original app from [Kathy Lovan](https://github.com/katiosity), [Katlyn Buffum](https://github.com/k-buffum), [Neth Horn], [Scott Heron](https://github.com/scottheron/). API data comes from Google Places (https://developers.google.com/places/)
+Rainy Day is an original app from [Kathy Lovan](https://github.com/katiosity), [Katlyn Buffum](https://github.com/k-buffum), Neth Horn, [Scott Heron](https://github.com/scottheron/). API data comes from Google Places (https://developers.google.com/places/)

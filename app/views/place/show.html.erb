@@ -1,16 +1,21 @@
-<div class="container">
-	<h1><%= @details["result"]["name"] %></h1>
-	<div class="well">
-		<h3><a href="<%= @details['result']['website'] %>" target="_blank">Visit website</a></h3>
-		<h4><%= @details["result"]["formatted_address"] %></h4>
-		<h4><%= @details["result"]["formatted_phone_number"] %></h4>
+<div id='place-show-body'>
 
-		<%= bootstrap_form_for :place do |place| %>
-			<%= place.hidden_field :name, value: @details['result']['name'] %>
-			<%= place.hidden_field :url, value: @details['result']['website'] %>
-			<%= place.hidden_field :address, value: @details['result']['formatted_address'] %>
-			<%= place.hidden_field :phone, value: @details['result']['formatted_phone_number'] %>
-			<%= place.hidden_field :place_id, value: @details['result']['place_id'] %>
-			<%= submit_tag("Save for a rainy day") %>
-		<% end %>
+	<div class="container">
+		<h1 class='place-header'><%= @details["result"]["name"] %></h1>
+		<div class="well place-opacity2">
+			<h3><a href="<%= @details['result']['website'] %>" target="_blank">Visit website</a></h3>
+			<h4><%= @details["result"]["formatted_address"] %></h4>
+			<h4><%= @details["result"]["formatted_phone_number"] %></h4>
+
+			<%= bootstrap_form_for :place do |place| %>
+				<%= place.hidden_field :name, value: @details['result']['name'] %>
+				<%= place.hidden_field :url, value: @details['result']['website'] %>
+				<%= place.hidden_field :address, value: @details['result']['formatted_address'] %>
+				<%= place.hidden_field :phone, value: @details['result']['formatted_phone_number'] %>
+				<%= place.hidden_field :place_id, value: @details['result']['place_id'] %>
+				<%= submit_tag("Save for a rainy day", class: 'place-form-button') %>
+			<% end %>
+		</div>
 	</div>
+
+</div>

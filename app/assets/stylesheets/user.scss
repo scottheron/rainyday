@@ -1,3 +1,64 @@
 // Place all the styles related to the user controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// views/user/show.html.erb
+
+#user-profile-body{
+  min-height: 838px;
+  padding-top: 15px;
+  background-image: asset-url('colorful-umbrellas.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+}
+
+.user-opacity {
+  background-color: rgba(125, 146, 153, 0.9);
+  width: 75%;
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.user-form-button {
+  margin-top: 10px;
+  font-size: 25px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  background-color: #173e43;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+#edit-form-button {
+  margin-top: 20px;
+}
+
+// views/user/edit.html.erb
+
+#user-edit-body{
+  min-height: 838px;
+  padding-top: 15px;
+  background-image: asset-url('rain-skyline.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+}
+
+#user-edit-form{
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: rgba(125, 146, 153, 0.8);
+  width: 75%;
+  padding: 20px;
+  margin: 15px auto;
+}

@@ -1,20 +1,22 @@
-<div class="container">
-	<h1>Search results for <i><%= @search_term %></i> near <i><%= @zip_code %></i></h1>
-	<br />
-	<% if @results["results"].present? %>
-		<% @results["results"].each do |place| %>
+<div id="place-results-body">
+	<div class="container">
+		<h1 class="place-header">Search results for <i><%= @search_term %></i> near <i><%= @zip_code %></i></h1>
+		<br />
+		<% if @results["results"].present? %>
+			<% @results["results"].each do |place| %>
+				<div class="well place-opacity">
+					<h1><%= place["name"] %></h1>
+					<%= form_tag("/results/details", method: "get") do %>
+	  					<%= hidden_field_tag(:place, place["place_id"])  %>
+	  					<%= submit_tag("More details") %>
+					<% end %>
+				</div>
+			<% end %>
+		<% else %>
 			<div class="well">
-				<h1><%= place["name"] %></h1>
-				<%= form_tag("/results/details", method: "get") do %>
-  					<%= hidden_field_tag(:place, place["place_id"])  %>
-  					<%= submit_tag("More details") %>
-				<% end %>
+				<p>No results found</p>
+				<p><a href="/search">Try again</a></p>
 			</div>
 		<% end %>
-	<% else %>
-		<div class="well">
-			<p>No results found</p>
-			<p><a href="/search">Try again</a></p>
-		</div>
-	<% end %>
+	</div>
 </div>
